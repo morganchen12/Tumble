@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
+		8D465D31196C6B580092F9B7 /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D465D30196C6B580092F9B7 /* Square.m */; };
 		8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E061965C1EC0046095F /* Gameplay.m */; };
 		8D6F5E131965D5F50046095F /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E121965D5F50046095F /* Player.m */; };
 		8D6F5E161965DA740046095F /* Projectile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E151965DA740046095F /* Projectile.m */; };
@@ -60,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		8D465D2F196C6B580092F9B7 /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Square.h; path = Source/Square.h; sourceTree = "<group>"; };
+		8D465D30196C6B580092F9B7 /* Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Square.m; path = Source/Square.m; sourceTree = "<group>"; };
 		8D6F5E051965C1EC0046095F /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		8D6F5E061965C1EC0046095F /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; usesTabs = 0; };
 		8D6F5E111965D5F50046095F /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Source/Player.h; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				B7378993180767190076A88C /* MainScene.m */,
 				8D6F5E051965C1EC0046095F /* Gameplay.h */,
 				8D6F5E061965C1EC0046095F /* Gameplay.m */,
+				8D465D2F196C6B580092F9B7 /* Square.h */,
+				8D465D30196C6B580092F9B7 /* Square.m */,
 				8D6F5E141965DA740046095F /* Projectile.h */,
 				8D6F5E151965DA740046095F /* Projectile.m */,
 				8D6F5E111965D5F50046095F /* Player.h */,
@@ -358,6 +363,7 @@
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */,
 				8D6F5E161965DA740046095F /* Projectile.m in Sources */,
+				8D465D31196C6B580092F9B7 /* Square.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				8D6F5E131965D5F50046095F /* Player.m in Sources */,

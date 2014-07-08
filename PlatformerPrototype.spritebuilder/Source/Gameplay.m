@@ -13,9 +13,9 @@
 //#import <math.h>
 #import "CCPhysics+ObjectiveChipmunk.h"
 
-static const float EXPLOSION_RADIUS = 50;                                   //explosion radius in points
+static const float EXPLOSION_RADIUS = 100;                                   //explosion radius in points
 static const float PROJECTILE_LIFESPAN = 20;                                //projectile lifespan in frames (60 frames/sec)
-static const float EXPLOSION_FORCE_MULTIPLIER = 100000;                     //for easy fine tuning
+static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
 static const float MIN_DISTANCE = 18;
 static const float PROJECTILE_LAUNCH_FORCE = 60;
 
@@ -55,7 +55,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
             [self shoot:M_PI / 2];
         }
         else {
-            [self shoot:M_PI / 2];
+            [self shoot:M_PI / -2];
         }
         return;
     }
@@ -97,38 +97,49 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
     [projectile.stickyJoint invalidate];
     projectile.stickyJoint = nil;
     [projectile removeFromParent];
-    for(CCNode *pushable in node.children) {                              //detonate nearby projectiles
-        float distance = powf(powf(explosionPosition.x - pushable.position.x, 2) +
-                              powf(explosionPosition.y - pushable.position.y, 2), 0.5);
-        if(distance < EXPLOSION_RADIUS && ([pushable isMemberOfClass:Projectile.class] && pushable != projectile)){
-            [self detonateProjectile:(Projectile *)pushable atPosition:pushable.position inCCNode:pushable.parent];
-            break;
-        }
-    }
+    
+//    for(CCNode *pushable in node.children) {                              //detonate nearby projectiles
+//        float distance = powf(powf(explosionPosition.x - pushable.position.x, 2) +
+//                              powf(explosionPosition.y - pushable.position.y, 2), 0.5);
+//        if(distance < EXPLOSION_RADIUS && ([pushable isMemberOfClass:Projectile.class] && pushable != projectile)){
+//            [self detonateProjectile:(Projectile *)pushable atPosition:pushable.position inCCNode:pushable.parent];
+//            break;
+//        }
+//    }
 }
 
 -(void)update:(CCTime)delta {
-    for(int i = 0; i < [_physicsNode.children count]; i++){
-        if([_physicsNode.children[i] isMemberOfClass:[Projectile class]]){
-            Projectile *projectile = (Projectile *)_physicsNode.children[i];
-            if(projectile.lifeSpan <= 0){
-                [self detonateProjectile:projectile atPosition:projectile.position inCCNode:_physicsNode];
-                continue;
-            }
-            projectile.lifeSpan--;
-        }
+//    for(int i = 0; i < [_physicsNode.children count]; i++){
+//        if([_physicsNode.children[i] isMemberOfClass:[Projectile class]]){
+//            Projectile *projectile = (Projectile *)_physicsNode.children[i];
+//            if(projectile.lifeSpan <= 0){
+//                [self detonateProjectile:projectile atPosition:projectile.position inCCNode:_physicsNode];
+//                continue;
+//            }
+//            projectile.lifeSpan--;
+//        }
+//    }
+    if(_player.position.x < 0 ||
+       _player.position.y < 0 ||
+       _player.position.x > _level.contentSize.width){
+        [self restartLevel];
     }
+}
+
+-(void)restartLevel {
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Gameplay"]];
 }
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile world:(CCNode *)world {
     Projectile *myProjectile = (Projectile *)projectile;
 //    [myProjectile.stickyJoint invalidate];
 //    myProjectile.stickyJoint = nil;
-    myProjectile.stickyJoint = [CCPhysicsJoint connectedPivotJointWithBodyA:myProjectile.physicsBody
-                                                                       bodyB:world.physicsBody
-                                                                     anchorA:myProjectile.anchorPointInPoints];
+//    myProjectile.stickyJoint = [CCPhysicsJoint connectedPivotJointWithBodyA:myProjectile.physicsBody
+//                                                                       bodyB:world.physicsBody
+//                                                                     anchorA:myProjectile.anchorPointInPoints];
 //    [myProjectile.stickyJoint tryAddToPhysicsNode:_physicsNode];
 //    return TRUE;
+    [self detonateProjectile:myProjectile atPosition:myProjectile.position inCCNode:_physicsNode];
 }
 
 @end
