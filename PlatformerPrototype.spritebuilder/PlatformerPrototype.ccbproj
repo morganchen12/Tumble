@@ -85,6 +85,8 @@
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
+		<key>CustomAssets/circle.png</key>
+		<dict/>
 		<key>Sprites</key>
 		<dict/>
 		<key>ccbResources</key>

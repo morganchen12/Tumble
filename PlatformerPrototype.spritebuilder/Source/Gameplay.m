@@ -13,7 +13,7 @@
 //#import <math.h>
 #import "CCPhysics+ObjectiveChipmunk.h"
 
-static const float EXPLOSION_RADIUS = 100;                                   //explosion radius in points
+static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float PROJECTILE_LIFESPAN = 20;                                //projectile lifespan in frames (60 frames/sec)
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
 static const float MIN_DISTANCE = 18;
@@ -63,7 +63,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
     if(touchLocation.x - _player.position.x < 0) {
         angle += M_PI;
     }
-    CCLOG(@"\n%f", angle);
+//    CCLOG(@"\n%f", angle);
     [self shoot:angle];
 }
 
@@ -119,7 +119,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 //            projectile.lifeSpan--;
 //        }
 //    }
-    if(_player.position.x < 0 ||
+    if(_player.position.x < 0 ||                                                    //check if player exits worldbounds
        _player.position.y < 0 ||
        _player.position.x > _level.contentSize.width){
         [self restartLevel];
@@ -127,7 +127,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 }
 
 -(void)restartLevel {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Gameplay"]];
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Gameplay"]]; //reload level upon death
 }
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile world:(CCNode *)world {
