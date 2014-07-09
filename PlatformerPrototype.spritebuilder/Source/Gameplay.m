@@ -136,10 +136,11 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 }
 
 -(NSString *)convertTimeToString {
-    int minutes = (int)(_timeElapsed/60);
-    int hours = (int)(minutes/60);
-    double seconds = (double)(_timeElapsed - (minutes + hours*60));
-    return [NSString stringWithFormat:@"%i:%i:%.3f", hours, minutes, seconds];
+    int hours = (int)(_timeElapsed/360);
+    int minutes = (int)((_timeElapsed - hours * 360)/60);
+    int seconds = (int)(_timeElapsed - (minutes*60 + hours*360));
+    int centiseconds = (int)100*(_timeElapsed - seconds);
+    return [NSString stringWithFormat:@"%.2i:%.2i:%.2i.%.2i", hours, minutes, seconds, centiseconds];
 }
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile world:(CCNode *)world {
@@ -154,8 +155,9 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
     [self detonateProjectile:myProjectile atPosition:myProjectile.position inCCNode:_physicsNode];
 }
 
--(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
+-(BOOL)ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
     CCLOG(@"\nlevel end reached!!!!!!");
+    return TRUE;
 }
 
 @end
