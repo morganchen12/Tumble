@@ -9,8 +9,6 @@
 #import "Gameplay.h"
 #import "Player.h"
 #import "Projectile.h"
-#import <stdlib.h>
-//#import <math.h>
 #import "CCPhysics+ObjectiveChipmunk.h"
 
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
@@ -136,10 +134,10 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 }
 
 -(NSString *)convertTimeToString {
-    int hours = (int)(_timeElapsed/360);
-    int minutes = (int)((_timeElapsed - hours * 360)/60);
-    int seconds = (int)(_timeElapsed - (minutes*60 + hours*360));
-    int centiseconds = (int)100*(_timeElapsed - seconds);
+    int hours = (int)(_timeElapsed/3600);
+    int minutes = (int)((_timeElapsed - hours*3600)/60);
+    int seconds = (int)(_timeElapsed - (minutes*60 + hours*3600));
+    int centiseconds = (int)100*(_timeElapsed - (seconds + minutes*60 + hours*3600));
     return [NSString stringWithFormat:@"%.2i:%.2i:%.2i.%.2i", hours, minutes, seconds, centiseconds];
 }
 
@@ -156,7 +154,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 }
 
 -(BOOL)ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
-    CCLOG(@"\nlevel end reached!!!!!!");
+    CCLOG(@"%@", [self convertTimeToString]);
     return TRUE;
 }
 
