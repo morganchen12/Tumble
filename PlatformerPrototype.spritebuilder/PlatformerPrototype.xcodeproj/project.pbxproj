@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
+		8D0022E2196DC76D003789F4 /* EndTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0022E1196DC76D003789F4 /* EndTrigger.m */; };
 		8D465D31196C6B580092F9B7 /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D465D30196C6B580092F9B7 /* Square.m */; };
 		8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E061965C1EC0046095F /* Gameplay.m */; };
 		8D6F5E131965D5F50046095F /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E121965D5F50046095F /* Player.m */; };
@@ -61,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		8D0022E0196DC76D003789F4 /* EndTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EndTrigger.h; path = Source/EndTrigger.h; sourceTree = "<group>"; };
+		8D0022E1196DC76D003789F4 /* EndTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EndTrigger.m; path = Source/EndTrigger.m; sourceTree = "<group>"; };
 		8D465D2F196C6B580092F9B7 /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Square.h; path = Source/Square.h; sourceTree = "<group>"; };
 		8D465D30196C6B580092F9B7 /* Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Square.m; path = Source/Square.m; sourceTree = "<group>"; };
 		8D6F5E051965C1EC0046095F /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				8D6F5E151965DA740046095F /* Projectile.m */,
 				8D6F5E111965D5F50046095F /* Player.h */,
 				8D6F5E121965D5F50046095F /* Player.m */,
+				8D0022E0196DC76D003789F4 /* EndTrigger.h */,
+				8D0022E1196DC76D003789F4 /* EndTrigger.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			files = (
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */,
+				8D0022E2196DC76D003789F4 /* EndTrigger.m in Sources */,
 				8D6F5E161965DA740046095F /* Projectile.m in Sources */,
 				8D465D31196C6B580092F9B7 /* Square.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,

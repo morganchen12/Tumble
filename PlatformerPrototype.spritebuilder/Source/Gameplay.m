@@ -14,7 +14,7 @@
 #import "CCPhysics+ObjectiveChipmunk.h"
 
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
-static const float PROJECTILE_LIFESPAN = 20;                                //projectile lifespan in frames (60 frames/sec)
+//static const float PROJECTILE_LIFESPAN = 20;                                //projectile lifespan in frames (60 frames/sec)
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
 static const float MIN_DISTANCE = 18;
 static const float PROJECTILE_LAUNCH_FORCE = 60;
@@ -24,9 +24,12 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
     CCNode *_level;
     Player *_player;
     CCNode *_contentNode;
+    CCLabelTTF *_timerLabel;
+    double _timeElapsed;
 }
 
 -(void)didLoadFromCCB {
+    _timeElapsed = 0;
     self.userInteractionEnabled = TRUE;
     _level = [CCBReader load:@"Levels/Level1" owner:self];           //load in level with owner:self to access player
     _physicsNode.contentSize = _level.contentSize;
@@ -40,7 +43,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 -(void)shoot:(float)angle {
     Projectile *projectile = (Projectile *)[CCBReader load:@"Projectile"];  //create Projectile and add to physicsNode at
     projectile.position = _player.position;                                 //current player position
-    projectile.lifeSpan = PROJECTILE_LIFESPAN;
+//    projectile.lifeSpan = PROJECTILE_LIFESPAN;
     [_physicsNode addChild:projectile];
     [projectile.physicsBody applyImpulse:ccp(PROJECTILE_LAUNCH_FORCE * cos(angle),
                                              PROJECTILE_LAUNCH_FORCE * sin(angle))];
@@ -92,7 +95,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
         CGPoint explosionVector = ccp(explosionMagnitude * (cos(angle)),  //create vector with magnitude explosionMagnitude
                                       explosionMagnitude * (sin(angle))); //and angle angle
         [_player.physicsBody applyImpulse:explosionVector];               //push player
-        CCLOG(@"\nx, y = %f, %f", explosionVector.x, explosionVector.y);
+//        CCLOG(@"\nx, y = %f, %f", explosionVector.x, explosionVector.y);
     }
     [projectile.stickyJoint invalidate];
     projectile.stickyJoint = nil;
@@ -124,10 +127,19 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
        _player.position.x > _level.contentSize.width){
         [self restartLevel];
     }
+    _timeElapsed += delta;
+    _timerLabel.string = [self convertTimeToString];
 }
 
 -(void)restartLevel {
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Gameplay"]]; //reload level upon death
+}
+
+-(NSString *)convertTimeToString {
+    int minutes = (int)(_timeElapsed/60);
+    int hours = (int)(minutes/60);
+    double seconds = (double)(_timeElapsed - (minutes + hours*60));
+    return [NSString stringWithFormat:@"%i:%i:%.3f", hours, minutes, seconds];
 }
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile world:(CCNode *)world {
@@ -140,6 +152,10 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 //    [myProjectile.stickyJoint tryAddToPhysicsNode:_physicsNode];
 //    return TRUE;
     [self detonateProjectile:myProjectile atPosition:myProjectile.position inCCNode:_physicsNode];
+}
+
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
+    CCLOG(@"\nlevel end reached!!!!!!");
 }
 
 @end

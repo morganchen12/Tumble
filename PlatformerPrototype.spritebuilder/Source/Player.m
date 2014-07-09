@@ -12,6 +12,7 @@
 
 -(void)didLoadFromCCB {
     self.physicsBody.collisionGroup = @"playerCollisionGroup";
+    self.physicsBody.collisionType = @"player";
 }
 
 @end
