@@ -10,24 +10,38 @@
 #import "Player.h"
 #import "Projectile.h"
 #import "CCPhysics+ObjectiveChipmunk.h"
+#import <CoreMotion/CoreMotion.h>
 
+static const float MOVE_SPEED_MULTIPLIER = 18;                              //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 //static const float PROJECTILE_LIFESPAN = 20;                                //projectile lifespan in frames (60 frames/sec)
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
-static const float MIN_DISTANCE = 18;
+static const float MIN_DISTANCE = 20;
 static const float PROJECTILE_LAUNCH_FORCE = 60;
 
 @implementation Gameplay {
+    float _timeElapsed;
+    CMMotionManager *_motionManager;
     CCPhysicsNode *_physicsNode;
     CCNode *_level;
     Player *_player;
     CCNode *_contentNode;
     CCLabelTTF *_timerLabel;
-    double _timeElapsed;
+}
+
+-(void)onEnter {
+    [super onEnter];
+    [_motionManager startAccelerometerUpdates];
+}
+
+-(void)onExit {
+    [super onExit];
+    [_motionManager stopAccelerometerUpdates];
 }
 
 -(void)didLoadFromCCB {
     _timeElapsed = 0;
+    _motionManager = [[CMMotionManager alloc] init];
     self.userInteractionEnabled = TRUE;
     _level = [CCBReader load:@"Levels/Level1" owner:self];           //load in level with owner:self to access player
     _physicsNode.contentSize = _level.contentSize;
@@ -95,8 +109,8 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
         [_player.physicsBody applyImpulse:explosionVector];               //push player
 //        CCLOG(@"\nx, y = %f, %f", explosionVector.x, explosionVector.y);
     }
-    [projectile.stickyJoint invalidate];
-    projectile.stickyJoint = nil;
+//    [projectile.stickyJoint invalidate];
+//    projectile.stickyJoint = nil;
     [projectile removeFromParent];
     
 //    for(CCNode *pushable in node.children) {                              //detonate nearby projectiles
@@ -120,6 +134,9 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 //            projectile.lifeSpan--;
 //        }
 //    }
+    CMAcceleration acceleration = _motionManager.accelerometerData.acceleration;    //move player on device tilt
+    [_player.physicsBody applyImpulse:ccp(acceleration.y * MOVE_SPEED_MULTIPLIER, 0)];
+    
     if(_player.position.x < 0 ||                                                    //check if player exits worldbounds
        _player.position.y < 0 ||
        _player.position.x > _level.contentSize.width){
@@ -130,7 +147,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 }
 
 -(void)restartLevel {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Gameplay"]]; //reload level upon death
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Gameplay"]]; //reload level upon death, keep timer time
 }
 
 -(NSString *)convertTimeToString {

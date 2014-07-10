@@ -13,6 +13,7 @@
 		8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E061965C1EC0046095F /* Gameplay.m */; };
 		8D6F5E131965D5F50046095F /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E121965D5F50046095F /* Player.m */; };
 		8D6F5E161965DA740046095F /* Projectile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E151965DA740046095F /* Projectile.m */; };
+		8DDF0AB6196F1BE30031D7F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DDF0AB5196F1BE30031D7F6 /* CoreMotion.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -72,6 +73,7 @@
 		8D6F5E121965D5F50046095F /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Source/Player.m; sourceTree = "<group>"; };
 		8D6F5E141965DA740046095F /* Projectile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Projectile.h; path = Source/Projectile.h; sourceTree = "<group>"; };
 		8D6F5E151965DA740046095F /* Projectile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Projectile.m; path = Source/Projectile.m; sourceTree = "<group>"; };
+		8DDF0AB5196F1BE30031D7F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DDF0AB6196F1BE30031D7F6 /* CoreMotion.framework in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
@@ -210,6 +213,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DDF0AB5196F1BE30031D7F6 /* CoreMotion.framework */,
 				8392007918EE8E3300B6C429 /* GLKit.framework */,
 				B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */,
 				B77F1B3117B978D7009739AE /* QuartzCore.framework */,
@@ -474,7 +478,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = PlatformerPrototype;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "D0190417-620E-479A-82FE-5BF5C154209A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -505,7 +509,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = PlatformerPrototype;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "D0190417-620E-479A-82FE-5BF5C154209A";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

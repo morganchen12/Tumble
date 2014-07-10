@@ -10,8 +10,8 @@
 
 @interface Projectile : CCSprite
 
-@property(nonatomic, assign) int lifeSpan;
+//@property(nonatomic, assign) int lifeSpan;
 
-@property CCPhysicsJoint *stickyJoint;
+//@property CCPhysicsJoint *stickyJoint;
 
 @end
