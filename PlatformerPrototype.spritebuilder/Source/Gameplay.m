@@ -18,8 +18,12 @@ static const float EXPLOSION_RADIUS = 100;                                  //ex
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
 static const float MIN_DISTANCE = 20;
 static const float PROJECTILE_LAUNCH_FORCE = 60;
+static const float PROJECTILE_COOLDOWN = 10;                                //in 60ths of a second
 
 @implementation Gameplay {
+    BOOL _shooting;
+    int _coolDown;                                                          //interval between shots
+    float _angleToShootAt;
     float _timeElapsed;
     CMMotionManager *_motionManager;
     CCPhysicsNode *_physicsNode;
@@ -40,6 +44,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 }
 
 -(void)didLoadFromCCB {
+    _shooting = FALSE;
     _timeElapsed = 0;
     _motionManager = [[CMMotionManager alloc] init];
     self.userInteractionEnabled = TRUE;
@@ -52,34 +57,61 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
 //    CCLOG(@"x, y = %f, %f", _level.position.x, _level.position.y);        //debug
 }
 
--(void)shoot:(float)angle {
-    Projectile *projectile = (Projectile *)[CCBReader load:@"Projectile"];  //create Projectile and add to physicsNode at
-    projectile.position = _player.position;                                 //current player position
-//    projectile.lifeSpan = PROJECTILE_LIFESPAN;
-    [_physicsNode addChild:projectile];
-    [projectile.physicsBody applyImpulse:ccp(PROJECTILE_LAUNCH_FORCE * cos(angle),
-                                             PROJECTILE_LAUNCH_FORCE * sin(angle))];
-    [projectile.physicsBody applyTorque:(arc4random() % 360)];              //apply random spin (cosmetic function only)
-    //CCLOG(@"\nx, y = %f, %f", _player.position.x, _player.position.y);
+-(void)shoot {
+    if(_coolDown <= 0){
+        Projectile *projectile = (Projectile *)[CCBReader load:@"Projectile"];  //create Projectile and add to physicsNode at
+        projectile.position = _player.position;                                 //current player position
+        //    projectile.lifeSpan = PROJECTILE_LIFESPAN;
+        [_physicsNode addChild:projectile];
+        [projectile.physicsBody applyImpulse:ccp(PROJECTILE_LAUNCH_FORCE * cos(_angleToShootAt),
+                                                 PROJECTILE_LAUNCH_FORCE * sin(_angleToShootAt))];
+        [projectile.physicsBody applyTorque:(arc4random() % 360)];              //apply random spin (cosmetic function only)
+        //CCLOG(@"\nx, y = %f, %f", _player.position.x, _player.position.y);
+        _coolDown = PROJECTILE_COOLDOWN;
+    }
 }
 
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    _shooting = TRUE;
     CGPoint touchLocation = [touch locationInNode:_physicsNode];
     if(touchLocation.x - _player.position.x == 0){
         if(touchLocation.y > touchLocation.x){ //calculate angle to shoot while avoiding divide by 0 errors
-            [self shoot:M_PI / 2];
+            _angleToShootAt = M_PI / 2;
         }
         else {
-            [self shoot:M_PI / -2];
+            _angleToShootAt = M_PI / -2;
         }
         return;
     }
-    float angle = atan((touchLocation.y - _player.position.y) / (touchLocation.x - _player.position.x));
+    _angleToShootAt = atan((touchLocation.y - _player.position.y) / (touchLocation.x - _player.position.x));
     if(touchLocation.x - _player.position.x < 0) {
-        angle += M_PI;
+        _angleToShootAt += M_PI;
     }
-//    CCLOG(@"\n%f", angle);
-    [self shoot:angle];
+}
+
+-(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
+    CGPoint touchLocation = [touch locationInNode:_physicsNode];
+    if(touchLocation.x - _player.position.x == 0){
+        if(touchLocation.y > touchLocation.x){ //calculate angle to shoot while avoiding divide by 0 errors
+            _angleToShootAt = M_PI / 2;
+        }
+        else {
+            _angleToShootAt = M_PI / -2;
+        }
+        return;
+    }
+    _angleToShootAt = atan((touchLocation.y - _player.position.y) / (touchLocation.x - _player.position.x));
+    if(touchLocation.x - _player.position.x < 0) {
+        _angleToShootAt += M_PI;
+    }
+}
+
+-(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
+    _shooting = FALSE;
+}
+
+-(void)touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event {
+    _shooting = FALSE;
 }
 
 -(void)detonateProjectile:(Projectile *)projectile atPosition:(CGPoint)explosionPosition inCCNode:(CCNode *)node {
@@ -148,6 +180,13 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
     }
     _timeElapsed += delta;
 //    _timerLabel.string = [self convertTimeToString];
+    
+    if(_coolDown > 0) {
+        _coolDown--;
+    }
+    else if(_shooting){
+        [self shoot];
+    }
 }
 
 -(void)restartLevel {
