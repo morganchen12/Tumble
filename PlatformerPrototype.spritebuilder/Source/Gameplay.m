@@ -26,7 +26,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
     CCNode *_level;
     Player *_player;
     CCNode *_contentNode;
-    CCLabelTTF *_timerLabel;
+//    CCLabelTTF *_timerLabel;                                              //broken 7/11/14
 }
 
 -(void)onEnter {
@@ -111,6 +111,10 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
     }
 //    [projectile.stickyJoint invalidate];
 //    projectile.stickyJoint = nil;
+    CCParticleSystem *explosion = (CCParticleSystem *)[CCBReader load:@"Explosion"];
+    explosion.autoRemoveOnFinish = TRUE;
+    explosion.position = projectile.position;
+    [projectile.parent addChild:explosion];
     [projectile removeFromParent];
     
 //    for(CCNode *pushable in node.children) {                              //detonate nearby projectiles
@@ -143,7 +147,7 @@ static const float PROJECTILE_LAUNCH_FORCE = 60;
         [self restartLevel];
     }
     _timeElapsed += delta;
-    _timerLabel.string = [self convertTimeToString];
+//    _timerLabel.string = [self convertTimeToString];
 }
 
 -(void)restartLevel {
