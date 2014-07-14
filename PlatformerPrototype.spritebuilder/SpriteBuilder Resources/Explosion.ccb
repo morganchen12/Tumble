@@ -318,6 +318,8 @@
 				<string>ccbResources/ccbParticleMagic.png</string>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -367,9 +369,9 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>0.0</real>
 			<key>name</key>
-			<string>Default Timeline</string>
+			<string>Untitled Timeline</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>

@@ -70,7 +70,7 @@
 			<key>elasticity</key>
 			<real>0.30000001192092896</real>
 			<key>friction</key>
-			<real>0.30000001192092896</real>
+			<real>0.0</real>
 			<key>points</key>
 			<array>
 				<array>
@@ -154,8 +154,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -205,7 +203,7 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>0.033333335071802139</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
