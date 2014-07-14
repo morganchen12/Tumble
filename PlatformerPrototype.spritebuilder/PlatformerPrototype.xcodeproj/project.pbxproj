@@ -13,6 +13,8 @@
 		8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E061965C1EC0046095F /* Gameplay.m */; };
 		8D6F5E131965D5F50046095F /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E121965D5F50046095F /* Player.m */; };
 		8D6F5E161965DA740046095F /* Projectile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E151965DA740046095F /* Projectile.m */; };
+		8D792A231974908A00AE52B2 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D792A221974908A00AE52B2 /* Level.m */; };
+		8D792A291974927F00AE52B2 /* ScoreScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D792A281974927F00AE52B2 /* ScoreScreen.m */; };
 		8DDF0AB6196F1BE30031D7F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DDF0AB5196F1BE30031D7F6 /* CoreMotion.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -73,6 +75,10 @@
 		8D6F5E121965D5F50046095F /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Source/Player.m; sourceTree = "<group>"; };
 		8D6F5E141965DA740046095F /* Projectile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Projectile.h; path = Source/Projectile.h; sourceTree = "<group>"; };
 		8D6F5E151965DA740046095F /* Projectile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Projectile.m; path = Source/Projectile.m; sourceTree = "<group>"; };
+		8D792A211974908A00AE52B2 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = Source/Level.h; sourceTree = "<group>"; };
+		8D792A221974908A00AE52B2 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = Source/Level.m; sourceTree = "<group>"; };
+		8D792A271974927F00AE52B2 /* ScoreScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreScreen.h; path = Source/ScoreScreen.h; sourceTree = "<group>"; };
+		8D792A281974927F00AE52B2 /* ScoreScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreScreen.m; path = Source/ScoreScreen.m; sourceTree = "<group>"; };
 		8DDF0AB5196F1BE30031D7F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -149,6 +155,10 @@
 				B7378993180767190076A88C /* MainScene.m */,
 				8D6F5E051965C1EC0046095F /* Gameplay.h */,
 				8D6F5E061965C1EC0046095F /* Gameplay.m */,
+				8D792A271974927F00AE52B2 /* ScoreScreen.h */,
+				8D792A281974927F00AE52B2 /* ScoreScreen.m */,
+				8D792A211974908A00AE52B2 /* Level.h */,
+				8D792A221974908A00AE52B2 /* Level.m */,
 				8D465D2F196C6B580092F9B7 /* Square.h */,
 				8D465D30196C6B580092F9B7 /* Square.m */,
 				8D6F5E141965DA740046095F /* Projectile.h */,
@@ -369,9 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D792A291974927F00AE52B2 /* ScoreScreen.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */,
 				8D0022E2196DC76D003789F4 /* EndTrigger.m in Sources */,
+				8D792A231974908A00AE52B2 /* Level.m in Sources */,
 				8D6F5E161965DA740046095F /* Projectile.m in Sources */,
 				8D465D31196C6B580092F9B7 /* Square.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,

@@ -10,4 +10,6 @@
 
 @interface Gameplay : CCNode <CCPhysicsCollisionDelegate>
 
+-(void)loadNextLevel:levelName;
+
 @end

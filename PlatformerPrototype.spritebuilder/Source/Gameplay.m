@@ -11,8 +11,10 @@
 #import "Projectile.h"
 #import "CCPhysics+ObjectiveChipmunk.h"
 #import <CoreMotion/CoreMotion.h>
+#import "Level.h"
+#import "ScoreScreen.h"
 
-static const float MOVE_SPEED_MULTIPLIER = 18;                              //scalar to multiply tilt force with
+static const float PLAYER_ACCEL_MULTIPLIER = 25;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
 static const float MIN_DISTANCE = 20;
@@ -32,6 +34,7 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
     Player *_player;
     CCNode *_contentNode;
     CCAction *_followPlayer;
+    NSString *_currentLevel;                                                //relative filepath to current level
 //    CCLabelTTF *_timerLabel;                                              //broken 7/11/14
 }
 
@@ -46,11 +49,14 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
 }
 
 -(void)didLoadFromCCB {
+    if(_currentLevel == nil) {
+        _currentLevel = @"Levels/Level1";
+    }
     _shooting = FALSE;
     _timeElapsed = 0;
     _motionManager = [[CMMotionManager alloc] init];
     self.userInteractionEnabled = TRUE;
-    _level = [CCBReader load:@"Levels/Level1" owner:self];           //load in level with owner:self to access player
+    _level = [CCBReader load:_currentLevel owner:self];           //load in level with owner:self to access player
     _physicsNode.contentSize = _level.contentSize;
     _physicsNode.collisionDelegate = self;
     [_physicsNode addChild:_level];
@@ -159,7 +165,7 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
             accel = 0;
         }
     }
-    [_player.physicsBody applyImpulse:ccp(accel * MOVE_SPEED_MULTIPLIER, 0)];
+    [_player.physicsBody applyImpulse:ccp(accel * PLAYER_ACCEL_MULTIPLIER, 0)];
     
     _timeElapsed += delta;
 //    _timerLabel.string = [self convertTimeToString];
@@ -196,8 +202,22 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
     [self detonateProjectile:myProjectile atPosition:myProjectile.position inCCNode:_physicsNode];
 }
 
+-(void)loadNextLevel:(NSString *)levelName {
+    _currentLevel = levelName;
+    [self restartLevel];
+}
+
 -(BOOL)ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
-    CCLOG(@"%@", [self convertTimeToString]);
+    self.paused = YES;
+    Level *currentLevel = (Level *)_level;
+    NSString *nextLevel = currentLevel.nextLevel;
+    ScoreScreen *scoreScreen = (ScoreScreen *)[CCBReader load:@"ScoreScreen"];
+    scoreScreen.nextLevelName = nextLevel;
+    scoreScreen.timeLabel.string = [self convertTimeToString];
+    scoreScreen.positionType = CCPositionTypeNormalized;
+    scoreScreen.position = ccp(0.5, 0.5);
+    scoreScreen.ownerNode = self;
+    [self addChild:scoreScreen];
     return TRUE;
 }
 
