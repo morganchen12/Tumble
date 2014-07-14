@@ -74,20 +74,24 @@ const CGSize FIXED_SIZE = {568, 384};
 // The available orientations should be defined in the Info.plist file.
 // And in iOS 6+ only, you can override it in the Root View controller in the "supportedInterfaceOrientations" method.
 // Only valid for iOS 6+. NOT VALID for iOS 4 / 5.
+//-(NSUInteger)supportedInterfaceOrientations //method hijacked; this is the original
+//{
+//    if ([_screenOrientation isEqual:CCScreenOrientationAll])
+//    {
+//        return UIInterfaceOrientationMaskAll;
+//    }
+//    else if ([_screenOrientation isEqual:CCScreenOrientationPortrait])
+//    {
+//        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+//    }
+//    else
+//    {
+//        return UIInterfaceOrientationMaskLandscape;
+//    }
+//}
 -(NSUInteger)supportedInterfaceOrientations
 {
-    if ([_screenOrientation isEqual:CCScreenOrientationAll])
-    {
-        return UIInterfaceOrientationMaskAll;
-    }
-    else if ([_screenOrientation isEqual:CCScreenOrientationPortrait])
-    {
-        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
-    }
-    else
-    {
-        return UIInterfaceOrientationMaskLandscape;
-    }
+    return UIInterfaceOrientationMaskLandscapeLeft;
 }
 
 // Supported orientations. Customize it for your own needs
