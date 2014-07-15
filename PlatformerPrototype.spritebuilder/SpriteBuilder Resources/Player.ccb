@@ -44,9 +44,9 @@
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
-		<string></string>
+		<string>_player</string>
 		<key>memberVarAssignmentType</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>physicsBody</key>
 		<dict>
 			<key>affectedByGravity</key>
@@ -154,6 +154,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

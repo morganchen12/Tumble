@@ -477,7 +477,7 @@ the pit</string>
 				<key>displayName</key>
 				<string>Player</string>
 				<key>memberVarAssignmentName</key>
-				<string>_player</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
 				<integer>2</integer>
 				<key>properties</key>
@@ -526,6 +526,8 @@ the pit</string>
 						<string>Player.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -836,8 +838,6 @@ the pit</string>
 						<string>Square.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

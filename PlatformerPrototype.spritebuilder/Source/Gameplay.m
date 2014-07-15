@@ -14,7 +14,7 @@
 #import "Level.h"
 #import "ScoreScreen.h"
 
-static const float PLAYER_ACCEL_MULTIPLIER = 25;                            //scalar to multiply tilt force with
+static const float PLAYER_ACCEL_MULTIPLIER = 30;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
 static const float MIN_DISTANCE = 20;
@@ -55,7 +55,7 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
 }
 
 -(void)didLoadFromCCB {
-    [[CCDirector sharedDirector] setDisplayStats:YES];
+    [[CCDirector sharedDirector] setDisplayStats:YES];  //debud fps counter
     if(_currentLevel == nil) {
         _currentLevel = @"Levels/Level1";
     }
@@ -69,7 +69,6 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
     if(_coolDown <= 0){
         Projectile *projectile = (Projectile *)[CCBReader load:@"Projectile"];  //create Projectile and add to physicsNode at
         projectile.position = _player.position;                                 //current player position
-        //    projectile.lifeSpan = PROJECTILE_LIFESPAN;
         [_physicsNode addChild:projectile];
         [projectile.physicsBody applyImpulse:ccp(PROJECTILE_LAUNCH_FORCE * cos(_angleToShootAt),
                                                  PROJECTILE_LAUNCH_FORCE * sin(_angleToShootAt))];

@@ -695,8 +695,6 @@ continuously</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -710,7 +708,7 @@ continuously</string>
 				<key>displayName</key>
 				<string>Player</string>
 				<key>memberVarAssignmentName</key>
-				<string>_player</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
 				<integer>2</integer>
 				<key>properties</key>
@@ -759,6 +757,8 @@ continuously</string>
 						<string>Player.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1207,7 +1207,7 @@ continuously</string>
 				<key>type</key>
 				<integer>3</integer>
 				<key>value</key>
-				<string>Levels/Level1</string>
+				<string>Levels/Level4</string>
 			</dict>
 		</array>
 		<key>displayName</key>
