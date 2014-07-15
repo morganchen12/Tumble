@@ -82,10 +82,10 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
     CGPoint touchLocation = [touch locationInNode:_physicsNode];
     if(touchLocation.x - _player.position.x == 0){
         if(touchLocation.y > touchLocation.x){ //calculate angle to shoot while avoiding divide by 0 errors
-            _angleToShootAt = M_PI / 2;
+            _angleToShootAt = M_PI / -2;
         }
         else {
-            _angleToShootAt = M_PI / -2;
+            _angleToShootAt = M_PI / 2;
         }
         return;
     }
@@ -98,7 +98,7 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
 -(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint touchLocation = [touch locationInNode:_physicsNode];
     if(touchLocation.x - _player.position.x == 0){
-        if(touchLocation.y > touchLocation.x){ //calculate angle to shoot while avoiding divide by 0 errors
+        if(touchLocation.y > _player.position.y){ //calculate angle to shoot while avoiding divide by 0 errors
             _angleToShootAt = M_PI / 2;
         }
         else {
