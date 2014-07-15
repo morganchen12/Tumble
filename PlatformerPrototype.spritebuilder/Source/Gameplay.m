@@ -34,13 +34,19 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
     Player *_player;
     CCNode *_contentNode;
     CCAction *_followPlayer;
-    NSString *_currentLevel;                                                //relative filepath to current level
+//    NSString *_currentLevel;                                              //relative filepath to current level
 //    CCLabelTTF *_timerLabel;                                              //broken 7/11/14
 }
 
 -(void)onEnter {
     [super onEnter];
     [_motionManager startAccelerometerUpdates];
+    _level = [CCBReader load:_currentLevel owner:self];           //load in level with owner:self to access player
+    _physicsNode.contentSize = _level.contentSize;
+    _physicsNode.collisionDelegate = self;
+    [_physicsNode addChild:_level];
+    _followPlayer = [CCActionFollow actionWithTarget:_player worldBoundary:_level.boundingBox];
+    [_contentNode runAction:_followPlayer];
 }
 
 -(void)onExit {
@@ -49,6 +55,7 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
 }
 
 -(void)didLoadFromCCB {
+    [[CCDirector sharedDirector] setDisplayStats:YES];
     if(_currentLevel == nil) {
         _currentLevel = @"Levels/Level1";
     }
@@ -56,12 +63,6 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
     _timeElapsed = 0;
     _motionManager = [[CMMotionManager alloc] init];
     self.userInteractionEnabled = TRUE;
-    _level = [CCBReader load:_currentLevel owner:self];           //load in level with owner:self to access player
-    _physicsNode.contentSize = _level.contentSize;
-    _physicsNode.collisionDelegate = self;
-    [_physicsNode addChild:_level];
-    _followPlayer = [CCActionFollow actionWithTarget:_player worldBoundary:_level.boundingBox];
-    [_contentNode runAction:_followPlayer];
 }
 
 -(void)shoot {
@@ -186,7 +187,10 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
 
 -(void)restartLevel {
     [_contentNode stopAction:_followPlayer];
-    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Gameplay"]]; //reload level upon death, keep timer time
+    CCScene *levelScene = [CCBReader loadAsScene:@"Gameplay"];
+    Gameplay *gameplay = levelScene.children[0];
+    gameplay.currentLevel = self.currentLevel;
+    [[CCDirector sharedDirector] replaceScene:levelScene]; //reload level upon death, keep timer time
 }
 
 -(NSString *)convertTimeToString {
@@ -203,8 +207,12 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
 }
 
 -(void)loadNextLevel:(NSString *)levelName {
+    [_contentNode stopAction:_followPlayer];
     _currentLevel = levelName;
-    [self restartLevel];
+    CCScene *nextLevelScene = [CCBReader loadAsScene:@"Gameplay"];
+    Gameplay *nextGameplay = nextLevelScene.children[0];
+    nextGameplay.currentLevel = levelName;
+    [[CCDirector sharedDirector] replaceScene:nextLevelScene];
 }
 
 -(BOOL)ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {

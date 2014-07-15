@@ -10,6 +10,8 @@
 
 @interface Gameplay : CCNode <CCPhysicsCollisionDelegate>
 
+@property(nonatomic, strong) NSString *currentLevel;
+
 -(void)loadNextLevel:levelName;
 
 @end
