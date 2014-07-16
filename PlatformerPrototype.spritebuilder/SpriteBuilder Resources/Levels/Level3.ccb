@@ -305,7 +305,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Use the
+							<string>Shoot the
 walls to
 climb the
 chimney</string>
@@ -1245,7 +1245,7 @@ continuously</string>
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>600</real>
+					<real>550</real>
 					<real>1000</real>
 					<integer>0</integer>
 					<integer>0</integer>

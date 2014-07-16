@@ -267,8 +267,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>152.00003051757812</real>
-							<real>1274</real>
+							<real>450.00003051757812</real>
+							<real>1324</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -305,9 +305,9 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Tap beneath your
-feet to escape 
-the pit</string>
+							<string>Shoot the ground 
+under you to 
+jump up</string>
 							<false/>
 						</array>
 					</dict>
@@ -464,6 +464,8 @@ the pit</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -497,8 +499,8 @@ the pit</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>437.00003051757812</real>
-							<real>1181</real>
+							<real>152.00003051757812</real>
+							<real>1152</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -535,9 +537,8 @@ the pit</string>
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Tapping the
-screen shoots a
-square</string>
+							<string>Tap the screen
+to shoot a square</string>
 							<false/>
 						</array>
 					</dict>
@@ -996,7 +997,7 @@ something</string>
 						<key>value</key>
 						<array>
 							<string>Explosions can
-help you get to
+push you to
 faraway places</string>
 							<false/>
 						</array>

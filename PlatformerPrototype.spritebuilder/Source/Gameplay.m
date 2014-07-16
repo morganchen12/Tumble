@@ -69,10 +69,11 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
     if(_coolDown <= 0){
         Projectile *projectile = (Projectile *)[CCBReader load:@"Projectile"];  //create Projectile and add to physicsNode at
         projectile.position = _player.position;                                 //current player position
+        projectile.zOrder = 2;
         [_physicsNode addChild:projectile];
         [projectile.physicsBody applyImpulse:ccp(PROJECTILE_LAUNCH_FORCE * cos(_angleToShootAt),
                                                  PROJECTILE_LAUNCH_FORCE * sin(_angleToShootAt))];
-        [projectile.physicsBody applyTorque:(arc4random() % 360)];              //apply random spin (cosmetic only)
+        [projectile.physicsBody applyAngularImpulse:((arc4random() % 360) - 180)]; //apply random spin (cosmetic only)
         _coolDown = PROJECTILE_COOLDOWN;
     }
 }
@@ -214,7 +215,7 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
     [[CCDirector sharedDirector] replaceScene:nextLevelScene];
 }
 
--(BOOL)ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
     self.paused = YES;
     Level *currentLevel = (Level *)_level;
     NSString *nextLevel = currentLevel.nextLevel;

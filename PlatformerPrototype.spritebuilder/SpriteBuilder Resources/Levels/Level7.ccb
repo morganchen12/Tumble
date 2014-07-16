@@ -267,8 +267,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>555</real>
-							<real>295</real>
+							<real>600</real>
+							<real>290</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -639,8 +639,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>150</real>
-							<real>300</real>
+							<real>250</real>
+							<real>290</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -900,7 +900,7 @@
 				<key>type</key>
 				<integer>3</integer>
 				<key>value</key>
-				<string>Levels/Level7</string>
+				<string>Levels/Levelhard1</string>
 			</dict>
 		</array>
 		<key>displayName</key>

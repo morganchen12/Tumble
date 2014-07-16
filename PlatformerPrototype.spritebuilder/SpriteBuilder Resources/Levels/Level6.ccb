@@ -205,8 +205,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>517</real>
-							<real>1051</real>
+							<real>118</real>
+							<real>907</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -553,8 +553,6 @@ sharp edges</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -992,8 +990,8 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>50</real>
-							<real>900</real>
+							<real>-151</real>
+							<real>911</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1011,14 +1009,6 @@ sharp edges</string>
 							<false/>
 							<integer>0</integer>
 						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>rotation</string>
-						<key>type</key>
-						<string>Degrees</string>
-						<key>value</key>
-						<real>45</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1043,7 +1033,7 @@ sharp edges</string>
 				<key>type</key>
 				<integer>3</integer>
 				<key>value</key>
-				<string>Levels/Levelhard1</string>
+				<string>Levels/Level7</string>
 			</dict>
 		</array>
 		<key>displayName</key>
@@ -1114,6 +1104,8 @@ sharp edges</string>
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
