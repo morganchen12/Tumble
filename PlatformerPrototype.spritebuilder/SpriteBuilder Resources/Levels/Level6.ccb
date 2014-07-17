@@ -205,8 +205,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>118</real>
-							<real>907</real>
+							<real>1068</real>
+							<real>307</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -234,228 +234,8 @@
 						<string>EndTrigger.ccb</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>15</integer>
-				<key>baseClass</key>
-				<string>CCLabelTTF</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCLabelTTF</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<integer>1</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>1</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>string</string>
-						<key>type</key>
-						<string>Text</string>
-						<key>value</key>
-						<array>
-							<string>Danger!
-This device has
-sharp edges</string>
-							<false/>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>fontName</string>
-						<key>type</key>
-						<string>FontTTF</string>
-						<key>value</key>
-						<string>Helvetica</string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>fontSize</string>
-						<key>type</key>
-						<string>FloatScale</string>
-						<key>value</key>
-						<array>
-							<real>12</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>adjustsFontSizeToFit</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>color</string>
-						<key>type</key>
-						<string>Color3</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>1</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>dimensions</string>
-						<key>type</key>
-						<string>Size</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>horizontalAlignment</string>
-						<key>type</key>
-						<string>IntegerLabeled</string>
-						<key>value</key>
-						<integer>0</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>verticalAlignment</string>
-						<key>type</key>
-						<string>IntegerLabeled</string>
-						<key>value</key>
-						<integer>0</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>fontColor</string>
-						<key>type</key>
-						<string>Color4</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>outlineColor</string>
-						<key>type</key>
-						<string>Color4</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>outlineWidth</string>
-						<key>type</key>
-						<string>FloatScale</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>shadowColor</string>
-						<key>type</key>
-						<string>Color4</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>shadowBlurRadius</string>
-						<key>type</key>
-						<string>FloatScale</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>shadowOffset</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -489,8 +269,8 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>310</real>
-							<real>229</real>
+							<real>600</real>
+							<real>290</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -526,7 +306,7 @@ sharp edges</string>
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>180</real>
+						<real>-90</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -556,7 +336,96 @@ sharp edges</string>
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>3</integer>
+				<integer>15</integer>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>arrow</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>427</real>
+							<real>661</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>spriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>CustomAssets/arrow.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>5</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -586,8 +455,8 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>300</real>
-							<real>200</real>
+							<real>39</real>
+							<real>789</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -648,8 +517,8 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>300</real>
-							<real>0.0</real>
+							<real>150</real>
+							<real>600</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -680,7 +549,7 @@ sharp edges</string>
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>4</integer>
+				<integer>3</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -710,8 +579,8 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>50</real>
-							<real>300</real>
+							<real>-150</real>
+							<real>900</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -729,14 +598,6 @@ sharp edges</string>
 							<false/>
 							<integer>0</integer>
 						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>rotation</string>
-						<key>type</key>
-						<string>Degrees</string>
-						<key>value</key>
-						<real>45</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -780,8 +641,8 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>450</real>
-							<real>450</real>
+							<real>250</real>
+							<real>290</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -850,7 +711,7 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>50</real>
+							<real>750</real>
 							<real>600</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -920,8 +781,8 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>450</real>
 							<real>750</real>
+							<real>1024</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -990,8 +851,8 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-151</real>
-							<real>911</real>
+							<real>1000</real>
+							<real>0.0</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1009,6 +870,14 @@ sharp edges</string>
 							<false/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>45</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1033,7 +902,7 @@ sharp edges</string>
 				<key>type</key>
 				<integer>3</integer>
 				<key>value</key>
-				<string>Levels/Level7</string>
+				<string>Levels/Levelhard1</string>
 			</dict>
 		</array>
 		<key>displayName</key>
@@ -1073,8 +942,8 @@ sharp edges</string>
 				<string>Size</string>
 				<key>value</key>
 				<array>
+					<real>1500</real>
 					<real>1000</real>
-					<real>1200</real>
 					<integer>0</integer>
 					<integer>0</integer>
 				</array>
@@ -1104,8 +973,6 @@ sharp edges</string>
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

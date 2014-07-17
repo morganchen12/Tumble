@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>19</integer>
+	<integer>17</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -175,7 +175,7 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>15</integer>
+				<integer>9</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -205,8 +205,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>458.46148681640625</real>
-							<real>844.8726806640625</real>
+							<real>522.00006103515625</real>
+							<real>543</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -237,7 +237,7 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>18</integer>
+				<integer>13</integer>
 				<key>baseClass</key>
 				<string>CCLabelTTF</string>
 				<key>children</key>
@@ -267,8 +267,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>392</real>
-							<real>245</real>
+							<real>150</real>
+							<real>231</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -305,10 +305,9 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Shoot the
-walls to
-climb the
-chimney</string>
+							<string>Tilt toward and
+shoot down at
+the wall</string>
 							<false/>
 						</array>
 					</dict>
@@ -465,10 +464,12 @@ chimney</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>17</integer>
+				<integer>16</integer>
 				<key>baseClass</key>
 				<string>CCLabelTTF</string>
 				<key>children</key>
@@ -498,8 +499,8 @@ chimney</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>137</real>
-							<real>270</real>
+							<real>411</real>
+							<real>84</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -537,8 +538,8 @@ chimney</string>
 						<key>value</key>
 						<array>
 							<string>Tap and hold
-to shoot 
-continuously</string>
+to keep
+shooting</string>
 							<false/>
 						</array>
 					</dict>
@@ -698,19 +699,19 @@ continuously</string>
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>16</integer>
+				<integer>12</integer>
 				<key>baseClass</key>
-				<string>CCBFile</string>
+				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Player</string>
+				<string>arrow</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>2</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -728,8 +729,105 @@ continuously</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>275</real>
-							<real>175</real>
+							<real>380</real>
+							<real>244</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>180</real>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>spriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>CustomAssets/arrow.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>11</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>Player</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>37</real>
+							<real>190</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -790,7 +888,7 @@ continuously</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>275</real>
+							<real>150</real>
 							<real>0.0</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -852,7 +950,7 @@ continuously</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>100</real>
+							<real>-150</real>
 							<real>300</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -976,132 +1074,8 @@ continuously</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>100</real>
-							<real>600</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Square.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>9</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Square</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>450</real>
-							<real>600</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Square.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>11</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Square</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
 							<real>-150</real>
-							<real>900</real>
+							<real>600</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1132,7 +1106,7 @@ continuously</string>
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>13</integer>
+				<integer>14</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -1162,8 +1136,8 @@ continuously</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>700</real>
-							<real>900</real>
+							<real>750</real>
+							<real>600</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1245,7 +1219,7 @@ continuously</string>
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>550</real>
+					<real>600</real>
 					<real>1000</real>
 					<integer>0</integer>
 					<integer>0</integer>
@@ -1276,8 +1250,6 @@ continuously</string>
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -1327,7 +1299,7 @@ continuously</string>
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>0.033333335071802139</real>
+			<real>10</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>

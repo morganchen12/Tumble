@@ -887,8 +887,6 @@ to shoot</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1605,7 +1603,7 @@ to shoot</string>
 						<key>value</key>
 						<array>
 							<real>300</real>
-							<real>600</real>
+							<real>550</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1633,6 +1631,8 @@ to shoot</string>
 						<string>Square.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

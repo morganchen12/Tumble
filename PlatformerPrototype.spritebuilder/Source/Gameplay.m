@@ -14,13 +14,13 @@
 #import "Level.h"
 #import "ScoreScreen.h"
 
-static const float PLAYER_ACCEL_MULTIPLIER = 30;                            //scalar to multiply tilt force with
+static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
 static const float MIN_DISTANCE = 20;
 static const float PROJECTILE_LAUNCH_FORCE = 75;
 static const float PROJECTILE_COOLDOWN = 15;                                //in 60ths of a second
-static const float PLAYER_XVEL_CAP = 100;                                   //cap on player xvelocity after which player
+static const float PLAYER_XVEL_CAP = 150;                                   //cap on player xvelocity after which player
                                                                             //cannot accelerate further via tilt
 
 @implementation Gameplay {
@@ -147,11 +147,11 @@ static const float PLAYER_XVEL_CAP = 100;                                   //ca
                                       explosionMagnitude * (sin(angle))); //and angle angle
         [_player.physicsBody applyImpulse:explosionVector];               //push player
     }
-//    CCParticleSystem *explosion = (CCParticleSystem *)[CCBReader load:@"Explosion"];
-//    explosion.autoRemoveOnFinish = NO;
-//    explosion.autoRemoveOnFinish = YES;
-//    explosion.position = projectile.position;
-//    [projectile.parent addChild:explosion];
+    CCParticleSystem *explosion = (CCParticleSystem *)[CCBReader load:@"Explosion"];
+    explosion.autoRemoveOnFinish = NO;
+    explosion.autoRemoveOnFinish = YES;
+    explosion.position = projectile.position;
+    [_contentNode addChild:explosion];
     [projectile removeFromParent];
 }
 

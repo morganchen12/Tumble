@@ -543,7 +543,7 @@
 						<key>value</key>
 						<array>
 							<real>186.00003051757812</real>
-							<real>1378</real>
+							<real>1406</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -580,7 +580,8 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Tilt to move</string>
+							<string>Tilt left or right
+to move</string>
 							<false/>
 						</array>
 					</dict>
@@ -737,6 +738,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -956,8 +959,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>450</real>
-							<real>1200</real>
+							<real>300</real>
+							<real>1137.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -975,6 +978,14 @@
 							<false/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>45</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1551,8 +1562,6 @@
 						<string>Square.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
