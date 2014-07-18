@@ -34,6 +34,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     Player *_player;
     CCNode *_contentNode;
     CCAction *_followPlayer;
+    CCNode *_pauseScreen;
 //    NSString *_currentLevel;                                              //relative filepath to current level
 //    CCLabelTTF *_timerLabel;                                              //broken 7/11/14
 }
@@ -47,6 +48,22 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     [_physicsNode addChild:_level];
     _followPlayer = [CCActionFollow actionWithTarget:_player worldBoundary:_level.boundingBox];
     [_contentNode runAction:_followPlayer];
+}
+
+-(void)pause {
+    if(self.paused == FALSE){
+        self.paused = TRUE;
+        _pauseScreen = [CCBReader load:@"PauseScreen" owner:self];
+        _pauseScreen.positionType = CCPositionTypeNormalized;
+        _pauseScreen.position = ccp(0.5, 0.5);
+        [self addChild:_pauseScreen];
+    }
+}
+
+-(void)unpause {
+    [self removeChild:_pauseScreen];
+    _pauseScreen = nil;
+    self.paused = FALSE;
 }
 
 -(void)onExit {
