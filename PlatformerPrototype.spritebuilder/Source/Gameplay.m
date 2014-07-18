@@ -55,7 +55,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 }
 
 -(void)didLoadFromCCB {
-    [[CCDirector sharedDirector] setDisplayStats:YES];  //debud fps counter
+    [[CCDirector sharedDirector] setDisplayStats:YES];  //debug fps counter
     if(_currentLevel == nil) {
         _currentLevel = @"Levels/Level1";
     }
@@ -198,7 +198,14 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     int minutes = (int)((_timeElapsed - hours*3600)/60);
     int seconds = (int)(_timeElapsed - (minutes*60 + hours*3600));
     int centiseconds = (int)100*(_timeElapsed - (seconds + minutes*60 + hours*3600));
-    return [NSString stringWithFormat:@"%.2i:%.2i:%.2i.%.2i", hours, minutes, seconds, centiseconds];
+    NSString *output = [NSString stringWithFormat:@"%.2i:%.2i:%.2i.%.2i", hours, minutes, seconds, centiseconds];
+    if(hours == 0){
+        if(minutes == 0){
+            return [output substringFromIndex:6];
+        }
+        return [output substringFromIndex:3];
+    }
+    return output;
 }
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile world:(CCNode *)world {
