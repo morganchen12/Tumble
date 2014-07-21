@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>8</integer>
+	<integer>9</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -43,15 +43,15 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-				<integer>6</integer>
+				<integer>8</integer>
 				<key>baseClass</key>
-				<string>CCSprite9Slice</string>
+				<string>CCNodeColor</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCSprite9Slice</string>
+				<string>CCNodeColor</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -73,11 +73,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>0.0</real>
+							<real>0.0</real>
 							<integer>0</integer>
-							<integer>2</integer>
-							<integer>2</integer>
+							<integer>0</integer>
+							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
@@ -100,8 +100,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>0.0</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -119,17 +119,6 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>spriteFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string></string>
-							<string>CustomAssets/bg.png</string>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
 						<string>color</string>
 						<key>type</key>
 						<string>Color3</string>
@@ -143,35 +132,11 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>marginLeft</string>
+						<string>opacity</string>
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>0.33000001311302185</real>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>marginRight</string>
-						<key>type</key>
-						<string>Float</string>
-						<key>value</key>
-						<real>0.33000001311302185</real>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>marginTop</string>
-						<key>type</key>
-						<string>Float</string>
-						<key>value</key>
-						<real>0.33000001311302185</real>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>marginBottom</string>
-						<key>type</key>
-						<string>Float</string>
-						<key>value</key>
-						<real>0.33000001311302185</real>
+						<real>1</real>
 					</dict>
 				</array>
 			</dict>
@@ -307,14 +272,6 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>backgroundOpacity|Normal</string>
-						<key>type</key>
-						<string>Float</string>
-						<key>value</key>
-						<real>0.5</real>
-					</dict>
-					<dict>
-						<key>name</key>
 						<string>labelColor|Normal</string>
 						<key>type</key>
 						<string>Color3</string>
@@ -340,6 +297,14 @@
 					<dict>
 						<key>name</key>
 						<string>backgroundOpacity|Highlighted</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.5</real>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>labelOpacity|Highlighted</string>
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
@@ -537,6 +502,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
