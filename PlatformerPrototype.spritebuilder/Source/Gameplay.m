@@ -14,6 +14,7 @@
 #import "Level.h"
 #import "ScoreScreen.h"
 
+static const int NUMBER_OF_LEVELS = 13;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
@@ -28,6 +29,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     int _coolDown;                                                          //interval between shots
     float _angleToShootAt;
     float _timeElapsed;
+    NSMutableDictionary *_levelProgress;
     CMMotionManager *_motionManager;
     CCPhysicsNode *_physicsNode;
     CCNode *_level;
@@ -80,6 +82,22 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     _timeElapsed = 0;
     _motionManager = [[CMMotionManager alloc] init];
     self.userInteractionEnabled = TRUE;
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *levelProgressUnmutable = (NSDictionary *)[userDefaults objectForKey:@"levelProgress"];
+    _levelProgress = [levelProgressUnmutable mutableCopy];
+    if(_levelProgress == nil){
+        _levelProgress = [self generateEmptyLevelProgress];
+    }
+}
+
+-(NSMutableDictionary *)generateEmptyLevelProgress {
+    NSMutableDictionary *temp = [@{} mutableCopy];
+    for(int i = 0; i < NUMBER_OF_LEVELS; i++){
+        NSString *keyName = [NSString stringWithFormat:@"Levels/Level%i", i];
+        [temp setObject:@0.f forKey:keyName];
+    }
+    return temp;
 }
 
 -(void)shoot {
@@ -186,7 +204,6 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     [_player.physicsBody applyImpulse:ccp(accel * PLAYER_ACCEL_MULTIPLIER, 0)];
     
     _timeElapsed += delta;
-//    _timerLabel.string = [self convertTimeToString];
     
     if(_coolDown > 0) {
         _coolDown--;
@@ -231,12 +248,20 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 }
 
 -(void)loadNextLevel:(NSString *)levelName {
+    [self saveProgress];
     [_contentNode stopAction:_followPlayer];
     _currentLevel = levelName;
     CCScene *nextLevelScene = [CCBReader loadAsScene:@"Gameplay"];
     Gameplay *nextGameplay = nextLevelScene.children[0];
     nextGameplay.currentLevel = levelName;
     [[CCDirector sharedDirector] replaceScene:nextLevelScene];
+}
+
+-(void)saveProgress {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [_levelProgress setObject:@(_timeElapsed) forKey:_currentLevel];
+    [userDefaults setObject:_levelProgress forKey:@"levelProgress"];
+    [userDefaults synchronize];
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
@@ -250,6 +275,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     scoreScreen.position = ccp(0.5, 0.5);
     scoreScreen.ownerNode = self;
     [self addChild:scoreScreen];
+    
     return TRUE;
 }
 
