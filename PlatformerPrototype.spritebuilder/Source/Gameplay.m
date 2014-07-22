@@ -14,12 +14,12 @@
 #import "Level.h"
 #import "ScoreScreen.h"
 
-static const int NUMBER_OF_LEVELS = 13;
+static const int NUMBER_OF_LEVELS = 15;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
 static const float MIN_DISTANCE = 20;
-static const float PROJECTILE_LAUNCH_FORCE = 75;
+static const float PROJECTILE_LAUNCH_FORCE = 7.5;
 static const float PROJECTILE_COOLDOWN = 15;                                //in 60ths of a second
 static const float PLAYER_XVEL_CAP = 150;                                   //cap on player xvelocity after which player
                                                                             //cannot accelerate further via tilt
@@ -79,6 +79,9 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
         if([(NSNumber *)[_levelProgress objectForKey:key] floatValue] > 0.f){
             levelNumber++;
         }
+    }
+    if(levelNumber > NUMBER_OF_LEVELS){
+        levelNumber = NUMBER_OF_LEVELS;
     }
     _currentLevel = [NSString stringWithFormat:@"Levels/Level%i", levelNumber];
 }
