@@ -73,22 +73,30 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     [_motionManager stopAccelerometerUpdates];
 }
 
--(void)didLoadFromCCB {
-    [[CCDirector sharedDirector] setDisplayStats:YES];  //debug fps counter
-    if(_currentLevel == nil) {
-        _currentLevel = @"Levels/Level1";
+-(void)findCurrentLevel {
+    int levelNumber = 1;
+    for(id key in _levelProgress){
+        if([(NSNumber *)[_levelProgress objectForKey:key] floatValue] > 0.f){
+            levelNumber++;
+        }
     }
-    _shooting = FALSE;
-    _timeElapsed = 0;
-    _motionManager = [[CMMotionManager alloc] init];
-    self.userInteractionEnabled = TRUE;
-    
+    _currentLevel = [NSString stringWithFormat:@"Levels/Level%i", levelNumber];
+}
+
+-(void)didLoadFromCCB {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *levelProgressUnmutable = (NSDictionary *)[userDefaults objectForKey:@"levelProgress"];
     _levelProgress = [levelProgressUnmutable mutableCopy];
     if(_levelProgress == nil){
         _levelProgress = [self generateEmptyLevelProgress];
     }
+    
+    [[CCDirector sharedDirector] setDisplayStats:YES];  //debug fps counter
+    [self findCurrentLevel];
+    _shooting = FALSE;
+    _timeElapsed = 0;
+    _motionManager = [[CMMotionManager alloc] init];
+    self.userInteractionEnabled = TRUE;
 }
 
 -(NSMutableDictionary *)generateEmptyLevelProgress {
