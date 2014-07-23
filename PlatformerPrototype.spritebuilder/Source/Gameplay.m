@@ -277,9 +277,12 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 
 -(void)saveProgress {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [_levelProgress setObject:@(_timeElapsed) forKey:_currentLevel];
-    [userDefaults setObject:_levelProgress forKey:@"levelProgress"];
-    [userDefaults synchronize];
+    float record = [(NSNumber *)[_levelProgress objectForKey:_currentLevel] floatValue];
+    if(record == 0 || record > _timeElapsed){
+        [_levelProgress setObject:@(_timeElapsed) forKey:_currentLevel];
+        [userDefaults setObject:_levelProgress forKey:@"levelProgress"];
+        [userDefaults synchronize];
+    }
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
