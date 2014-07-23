@@ -13,5 +13,6 @@
 @property(nonatomic, strong) NSString *currentLevel;
 
 -(void)loadNextLevel:levelName;
++(NSMutableDictionary *)generateEmptyLevelProgress;
 
 @end

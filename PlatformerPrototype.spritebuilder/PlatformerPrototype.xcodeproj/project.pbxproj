@@ -16,6 +16,8 @@
 		8D792A231974908A00AE52B2 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D792A221974908A00AE52B2 /* Level.m */; };
 		8D792A291974927F00AE52B2 /* ScoreScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D792A281974927F00AE52B2 /* ScoreScreen.m */; };
 		8D8A7827197D80130034CD51 /* ClockwiseSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8A7826197D80130034CD51 /* ClockwiseSquare.m */; };
+		8DAC279C1980223900639BC5 /* LevelDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC279B1980223900639BC5 /* LevelDisplay.m */; };
+		8DAC27A01980224B00639BC5 /* LevelSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC279F1980224B00639BC5 /* LevelSelect.m */; };
 		8DDF0AB6196F1BE30031D7F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DDF0AB5196F1BE30031D7F6 /* CoreMotion.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -82,6 +84,10 @@
 		8D792A281974927F00AE52B2 /* ScoreScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreScreen.m; path = Source/ScoreScreen.m; sourceTree = "<group>"; };
 		8D8A7825197D80130034CD51 /* ClockwiseSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClockwiseSquare.h; path = Source/ClockwiseSquare.h; sourceTree = "<group>"; };
 		8D8A7826197D80130034CD51 /* ClockwiseSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClockwiseSquare.m; path = Source/ClockwiseSquare.m; sourceTree = "<group>"; };
+		8DAC279A1980223900639BC5 /* LevelDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelDisplay.h; path = Source/LevelDisplay.h; sourceTree = "<group>"; };
+		8DAC279B1980223900639BC5 /* LevelDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelDisplay.m; path = Source/LevelDisplay.m; sourceTree = "<group>"; };
+		8DAC279E1980224B00639BC5 /* LevelSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelSelect.h; path = Source/LevelSelect.h; sourceTree = "<group>"; };
+		8DAC279F1980224B00639BC5 /* LevelSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelSelect.m; path = Source/LevelSelect.m; sourceTree = "<group>"; };
 		8DDF0AB5196F1BE30031D7F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -158,6 +164,10 @@
 				B7378993180767190076A88C /* MainScene.m */,
 				8D6F5E051965C1EC0046095F /* Gameplay.h */,
 				8D6F5E061965C1EC0046095F /* Gameplay.m */,
+				8DAC279A1980223900639BC5 /* LevelDisplay.h */,
+				8DAC279B1980223900639BC5 /* LevelDisplay.m */,
+				8DAC279E1980224B00639BC5 /* LevelSelect.h */,
+				8DAC279F1980224B00639BC5 /* LevelSelect.m */,
 				8D8A7825197D80130034CD51 /* ClockwiseSquare.h */,
 				8D8A7826197D80130034CD51 /* ClockwiseSquare.m */,
 				8D792A271974927F00AE52B2 /* ScoreScreen.h */,
@@ -387,6 +397,7 @@
 				8D792A291974927F00AE52B2 /* ScoreScreen.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */,
+				8DAC27A01980224B00639BC5 /* LevelSelect.m in Sources */,
 				8D0022E2196DC76D003789F4 /* EndTrigger.m in Sources */,
 				8D792A231974908A00AE52B2 /* Level.m in Sources */,
 				8D6F5E161965DA740046095F /* Projectile.m in Sources */,
@@ -395,6 +406,7 @@
 				B73789871807631A0076A88C /* main.m in Sources */,
 				8D6F5E131965D5F50046095F /* Player.m in Sources */,
 				8D8A7827197D80130034CD51 /* ClockwiseSquare.m in Sources */,
+				8DAC279C1980223900639BC5 /* LevelDisplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

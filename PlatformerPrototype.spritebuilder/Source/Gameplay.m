@@ -19,8 +19,8 @@ static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //sc
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
 static const float MIN_DISTANCE = 20;
-static const float PROJECTILE_LAUNCH_FORCE = 7.5;
-static const float PROJECTILE_COOLDOWN = 15;                                //in 60ths of a second
+static const float PROJECTILE_LAUNCH_FORCE = .075;
+static const int PROJECTILE_COOLDOWN = 15;                                  //in 60ths of a second
 static const float PLAYER_XVEL_CAP = 150;                                   //cap on player xvelocity after which player
                                                                             //cannot accelerate further via tilt
 
@@ -50,6 +50,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     [_physicsNode addChild:_level];
     _followPlayer = [CCActionFollow actionWithTarget:_player worldBoundary:_level.boundingBox];
     [_contentNode runAction:_followPlayer];
+    self.userInteractionEnabled = TRUE;
 }
 
 -(void)pause {
@@ -59,7 +60,14 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
         _pauseScreen.positionType = CCPositionTypeNormalized;
         _pauseScreen.position = ccp(0.5, 0.5);
         [self addChild:_pauseScreen];
+    } else {
+        [self unpause];
     }
+}
+
+-(void)levelSelect {
+    CCScene *levelSelectScene = [CCBReader loadAsScene:@"LevelSelect"];
+    [[CCDirector sharedDirector] replaceScene:levelSelectScene];
 }
 
 -(void)unpause {
@@ -91,7 +99,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     NSDictionary *levelProgressUnmutable = (NSDictionary *)[userDefaults objectForKey:@"levelProgress"];
     _levelProgress = [levelProgressUnmutable mutableCopy];
     if(_levelProgress == nil){
-        _levelProgress = [self generateEmptyLevelProgress];
+        _levelProgress = [Gameplay generateEmptyLevelProgress];
     }
     
     [[CCDirector sharedDirector] setDisplayStats:YES];  //debug fps counter
@@ -99,13 +107,12 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     _shooting = FALSE;
     _timeElapsed = 0;
     _motionManager = [[CMMotionManager alloc] init];
-    self.userInteractionEnabled = TRUE;
 }
 
--(NSMutableDictionary *)generateEmptyLevelProgress {
++(NSMutableDictionary *)generateEmptyLevelProgress {
     NSMutableDictionary *temp = [@{} mutableCopy];
     for(int i = 0; i < NUMBER_OF_LEVELS; i++){
-        NSString *keyName = [NSString stringWithFormat:@"Levels/Level%i", i];
+        NSString *keyName = [NSString stringWithFormat:@"Levels/Level%i", i+1];
         [temp setObject:@0.f forKey:keyName];
     }
     return temp;
@@ -194,7 +201,6 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
         [_player.physicsBody applyImpulse:explosionVector];               //push player
     }
     CCParticleSystem *explosion = (CCParticleSystem *)[CCBReader load:@"Explosion"];
-    explosion.autoRemoveOnFinish = NO;
     explosion.autoRemoveOnFinish = YES;
     explosion.position = projectile.position;
     [_contentNode addChild:explosion];
