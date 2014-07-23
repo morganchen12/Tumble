@@ -19,7 +19,7 @@
 }
 
 -(void)setLevelNumber:(int)levelNumber {
-    _numberLabel.string = [NSString stringWithFormat:@"%i", levelNumber];
+    _numberLabel.string = [NSString stringWithFormat:@"Level %i", levelNumber];
     _levelNumber = levelNumber;
 }
 

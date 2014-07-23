@@ -26,7 +26,7 @@
             _levelsUnlocked++;
         }
     }
-    if(_levelsUnlocked > [_levelProgress count]){
+    if(_levelsUnlocked > [_levelProgress count] && [_levelProgress count] > 0){
         _levelsUnlocked = [_levelProgress count];
     }
     [self populateScreen];

@@ -100,6 +100,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     _levelProgress = [levelProgressUnmutable mutableCopy];
     if(_levelProgress == nil){
         _levelProgress = [Gameplay generateEmptyLevelProgress];
+        [userDefaults synchronize];
     }
     
     [[CCDirector sharedDirector] setDisplayStats:YES];  //debug fps counter
