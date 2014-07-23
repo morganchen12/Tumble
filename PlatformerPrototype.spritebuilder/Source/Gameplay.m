@@ -291,7 +291,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     }
     Level *currentLevel = (Level *)_level;
     NSString *nextLevel = currentLevel.nextLevel;
-    ScoreScreen *scoreScreen = (ScoreScreen *)[CCBReader load:@"ScoreScreen"];
+    ScoreScreen *scoreScreen = (ScoreScreen *)[CCBReader load:@"ScoreScreen" owner:self];
     scoreScreen.nextLevelName = nextLevel;
     scoreScreen.timeLabel.string = [self convertTimeToString:_timeElapsed];
     scoreScreen.bestLabel.string = [self convertTimeToString:best];
