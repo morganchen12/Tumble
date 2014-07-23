@@ -19,7 +19,7 @@ static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //sc
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
 static const float MIN_DISTANCE = 20;
-static const float PROJECTILE_LAUNCH_FORCE = .075;
+static const float PROJECTILE_LAUNCH_FORCE = 75;
 static const int PROJECTILE_COOLDOWN = 15;                                  //in 60ths of a second
 static const float PLAYER_XVEL_CAP = 150;                                   //cap on player xvelocity after which player
                                                                             //cannot accelerate further via tilt
@@ -261,6 +261,9 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile world:(CCNode *)world {
     Projectile *myProjectile = (Projectile *)projectile;
     [self detonateProjectile:myProjectile atPosition:myProjectile.position inCCNode:_physicsNode];
+    if(world.physicsBody.type == CCPhysicsBodyTypeDynamic){
+        [world.physicsBody applyImpulse:ccp(0, 500)];
+    }
 }
 
 -(void)loadNextLevel:(NSString *)levelName {

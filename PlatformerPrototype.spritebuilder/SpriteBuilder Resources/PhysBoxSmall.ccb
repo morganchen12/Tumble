@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -40,7 +40,7 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string>Projectile</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -54,32 +54,63 @@
 			<key>allowsRotation</key>
 			<true/>
 			<key>bodyShape</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>collisionCategories</key>
 			<array/>
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>projectile</string>
+			<string>world</string>
 			<key>cornerRadius</key>
-			<real>3</real>
+			<real>0.0</real>
 			<key>density</key>
-			<real>10</real>
+			<real>25</real>
 			<key>dynamic</key>
 			<true/>
 			<key>elasticity</key>
-			<real>0.0</real>
+			<real>0.30000001192092896</real>
 			<key>friction</key>
-			<real>0.0</real>
+			<real>0.30000001192092896</real>
 			<key>points</key>
 			<array>
 				<array>
-					<real>4</real>
-					<real>4</real>
+					<real>9.6557130813598633</real>
+					<real>9.9049081802368164</real>
+				</array>
+				<array>
+					<real>9.9137439727783203</real>
+					<real>40.056613922119141</real>
+				</array>
+				<array>
+					<real>39.890697479248047</real>
+					<real>40.040843963623047</real>
+				</array>
+				<array>
+					<real>39.722251892089844</real>
+					<real>9.8979682922363281</real>
 				</array>
 			</array>
 			<key>polygons</key>
-			<array/>
+			<array>
+				<array>
+					<array>
+						<real>39.722251892089844</real>
+						<real>9.8979682922363281</real>
+					</array>
+					<array>
+						<real>39.890697479248047</real>
+						<real>40.040843963623047</real>
+					</array>
+					<array>
+						<real>9.9137439727783203</real>
+						<real>40.056613922119141</real>
+					</array>
+					<array>
+						<real>9.6557130813598633</real>
+						<real>9.9049081802368164</real>
+					</array>
+				</array>
+			</array>
 		</dict>
 		<key>properties</key>
 		<array>
@@ -137,7 +168,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>CustomAssets/squareSmall.png</string>
+					<string>CustomAssets/square200.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -205,7 +236,7 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>0.033333335071802139</real>
+			<real>10</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
@@ -232,6 +263,6 @@
 	<key>stageBorder</key>
 	<integer>3</integer>
 	<key>stageColor</key>
-	<integer>0</integer>
+	<integer>1</integer>
 </dict>
 </plist>
