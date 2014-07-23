@@ -18,6 +18,7 @@
 		8D8A7827197D80130034CD51 /* ClockwiseSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8A7826197D80130034CD51 /* ClockwiseSquare.m */; };
 		8DAC279C1980223900639BC5 /* LevelDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC279B1980223900639BC5 /* LevelDisplay.m */; };
 		8DAC27A01980224B00639BC5 /* LevelSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC279F1980224B00639BC5 /* LevelSelect.m */; };
+		8DAC27A31980533900639BC5 /* PhysRotateSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC27A21980533900639BC5 /* PhysRotateSquare.m */; };
 		8DDF0AB6196F1BE30031D7F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DDF0AB5196F1BE30031D7F6 /* CoreMotion.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -88,6 +89,8 @@
 		8DAC279B1980223900639BC5 /* LevelDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelDisplay.m; path = Source/LevelDisplay.m; sourceTree = "<group>"; };
 		8DAC279E1980224B00639BC5 /* LevelSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelSelect.h; path = Source/LevelSelect.h; sourceTree = "<group>"; };
 		8DAC279F1980224B00639BC5 /* LevelSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelSelect.m; path = Source/LevelSelect.m; sourceTree = "<group>"; };
+		8DAC27A11980533900639BC5 /* PhysRotateSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhysRotateSquare.h; path = Source/PhysRotateSquare.h; sourceTree = "<group>"; };
+		8DAC27A21980533900639BC5 /* PhysRotateSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhysRotateSquare.m; path = Source/PhysRotateSquare.m; sourceTree = "<group>"; };
 		8DDF0AB5196F1BE30031D7F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				8D792A221974908A00AE52B2 /* Level.m */,
 				8D465D2F196C6B580092F9B7 /* Square.h */,
 				8D465D30196C6B580092F9B7 /* Square.m */,
+				8DAC27A11980533900639BC5 /* PhysRotateSquare.h */,
+				8DAC27A21980533900639BC5 /* PhysRotateSquare.m */,
 				8D6F5E141965DA740046095F /* Projectile.h */,
 				8D6F5E151965DA740046095F /* Projectile.m */,
 				8D6F5E111965D5F50046095F /* Player.h */,
@@ -397,6 +402,7 @@
 				8D792A291974927F00AE52B2 /* ScoreScreen.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */,
+				8DAC27A31980533900639BC5 /* PhysRotateSquare.m in Sources */,
 				8DAC27A01980224B00639BC5 /* LevelSelect.m in Sources */,
 				8D0022E2196DC76D003789F4 /* EndTrigger.m in Sources */,
 				8D792A231974908A00AE52B2 /* Level.m in Sources */,

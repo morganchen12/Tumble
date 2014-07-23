@@ -13,6 +13,7 @@
 
 @property (nonatomic) NSString *nextLevelName;
 @property (nonatomic) CCLabelTTF *timeLabel;
+@property (nonatomic) CCLabelTTF *bestLabel;
 @property (weak, nonatomic) Gameplay *ownerNode;
 
 -(void)loadNextLevel;

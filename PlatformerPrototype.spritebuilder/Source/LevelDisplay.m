@@ -29,6 +29,9 @@
 }
 
 -(NSString *)convertTimeToString:(float)time {
+    if(time == 0){
+        return @"";
+    }
     int hours = (int)(time/3600);
     int minutes = (int)((time - hours*3600)/60);
     int seconds = (int)(time - (minutes*60 + hours*3600));

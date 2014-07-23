@@ -60,8 +60,6 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
         _pauseScreen.positionType = CCPositionTypeNormalized;
         _pauseScreen.position = ccp(0.5, 0.5);
         [self addChild:_pauseScreen];
-    } else {
-        [self unpause];
     }
 }
 
@@ -245,11 +243,11 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     [[CCDirector sharedDirector] replaceScene:levelScene]; //reload level upon death, keep timer time
 }
 
--(NSString *)convertTimeToString {
-    int hours = (int)(_timeElapsed/3600);
-    int minutes = (int)((_timeElapsed - hours*3600)/60);
-    int seconds = (int)(_timeElapsed - (minutes*60 + hours*3600));
-    int centiseconds = (int)100*(_timeElapsed - (seconds + minutes*60 + hours*3600));
+-(NSString *)convertTimeToString:(float)time {
+    int hours = (int)(time/3600);
+    int minutes = (int)((time - hours*3600)/60);
+    int seconds = (int)(time - (minutes*60 + hours*3600));
+    int centiseconds = (int)100*(time - (seconds + minutes*60 + hours*3600));
     NSString *output = [NSString stringWithFormat:@"%.2i:%.2i:%.2i.%.2i", hours, minutes, seconds, centiseconds];
     if(hours == 0){
         if(minutes == 0){
@@ -287,11 +285,16 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
     self.paused = YES;
+    float best = [(NSNumber *)[_levelProgress objectForKey:_currentLevel] floatValue];
+    if(best > _timeElapsed || best == 0){
+        best = _timeElapsed;
+    }
     Level *currentLevel = (Level *)_level;
     NSString *nextLevel = currentLevel.nextLevel;
     ScoreScreen *scoreScreen = (ScoreScreen *)[CCBReader load:@"ScoreScreen"];
     scoreScreen.nextLevelName = nextLevel;
-    scoreScreen.timeLabel.string = [self convertTimeToString];
+    scoreScreen.timeLabel.string = [self convertTimeToString:_timeElapsed];
+    scoreScreen.bestLabel.string = [self convertTimeToString:best];
     scoreScreen.positionType = CCPositionTypeNormalized;
     scoreScreen.position = ccp(0.5, 0.5);
     scoreScreen.ownerNode = self;
