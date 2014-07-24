@@ -1482,7 +1482,7 @@ TOO HARD</string>
 				<key>type</key>
 				<integer>3</integer>
 				<key>value</key>
-				<string>Levels/Level15</string>
+				<string>Levels/Level16</string>
 			</dict>
 		</array>
 		<key>displayName</key>
@@ -1553,6 +1553,8 @@ TOO HARD</string>
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
