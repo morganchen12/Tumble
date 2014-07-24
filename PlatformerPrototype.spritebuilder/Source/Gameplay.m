@@ -18,9 +18,9 @@ static const int NUMBER_OF_LEVELS = 15;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
-static const float EXPLOSION_FORCE_PHYSBOX_MULTIPLIER = 1000;
+static const float EXPLOSION_FORCE_PHYSBOX_MULTIPLIER = 1500;
 static const float MIN_DISTANCE = 20;
-static const float PROJECTILE_LAUNCH_FORCE = 75;
+static const float PROJECTILE_LAUNCH_FORCE = .075;
 static const int PROJECTILE_COOLDOWN = 15;                                  //in 60ths of a second
 static const float PLAYER_XVEL_CAP = 150;                                   //cap on player xvelocity after which player
                                                                             //cannot accelerate further via tilt
