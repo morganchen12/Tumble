@@ -14,11 +14,11 @@
 #import "Level.h"
 #import "ScoreScreen.h"
 
-static const int NUMBER_OF_LEVELS = 15;
+static const int NUMBER_OF_LEVELS = 16;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
-static const float EXPLOSION_FORCE_PHYSBOX_MULTIPLIER = 1500;
+static const float EXPLOSION_FORCE_PHYSBOX_MULTIPLIER = 2000;
 static const float MIN_DISTANCE = 20;
 static const float PROJECTILE_LAUNCH_FORCE = .075;
 static const int PROJECTILE_COOLDOWN = 15;                                  //in 60ths of a second
@@ -268,9 +268,9 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     Projectile *myProjectile = (Projectile *)projectile;
     CGPoint pushDirection = [Gameplay vectorNormalize:projectile.physicsBody.velocity];
     if(projectile == nil){
-        int randAngle = arc4random() % 360;
-        pushDirection = ccp(EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*cos(randAngle),
-                            EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*sin(randAngle));
+//        int randAngle = arc4random() % 360;
+//        pushDirection = ccp(EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*cos(randAngle),
+//                            EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*sin(randAngle));
         return;
     }
     [self detonateProjectile:myProjectile atPosition:myProjectile.position inCCNode:_physicsNode];
