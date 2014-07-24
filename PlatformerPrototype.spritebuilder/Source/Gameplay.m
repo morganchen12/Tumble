@@ -51,6 +51,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     [_physicsNode addChild:_level];
     _followPlayer = [CCActionFollow actionWithTarget:_player worldBoundary:_level.boundingBox];
     [_contentNode runAction:_followPlayer];
+    self.multipleTouchEnabled = TRUE;
     self.userInteractionEnabled = TRUE;
 }
 
@@ -282,7 +283,6 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 }
 
 -(void)loadNextLevel:(NSString *)levelName {
-    [self saveProgress];
     [_contentNode stopAction:_followPlayer];
     _currentLevel = levelName;
     CCScene *nextLevelScene = [CCBReader loadAsScene:@"Gameplay"];
@@ -317,6 +317,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     scoreScreen.position = ccp(0.5, 0.5);
     scoreScreen.ownerNode = self;
     [self addChild:scoreScreen];
+    [self saveProgress];
     
     return TRUE;
 }
