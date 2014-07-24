@@ -14,6 +14,7 @@
 #import "Level.h"
 #import "ScoreScreen.h"
 
+//static const float PLAYER_COLLISION_TOLERANCE = 5000;
 static const int NUMBER_OF_LEVELS = 16;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
@@ -206,6 +207,16 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     explosion.position = projectile.position;
     [_contentNode addChild:explosion];
     [projectile removeFromParent];
+}
+
+-(void)playerDeath {
+    CCParticleSystem *playerDeath = (CCParticleSystem *)[CCBReader load:@"PlayerDeath"];
+    playerDeath.autoRemoveOnFinish = TRUE;
+    playerDeath.position = _player.position;
+    [_player.parent addChild:playerDeath];
+    self.userInteractionEnabled = FALSE;
+    [_player removeFromParent];
+    [self restartLevel];
 }
 
 -(void)update:(CCTime)delta {
