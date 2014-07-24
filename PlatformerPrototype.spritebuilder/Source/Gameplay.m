@@ -18,6 +18,7 @@ static const int NUMBER_OF_LEVELS = 15;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
+static const float EXPLOSION_FORCE_PHYSBOX_MULTIPLIER = 1000;
 static const float MIN_DISTANCE = 20;
 static const float PROJECTILE_LAUNCH_FORCE = 75;
 static const int PROJECTILE_COOLDOWN = 15;                                  //in 60ths of a second
@@ -258,11 +259,25 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     return output;
 }
 
++(CGPoint)vectorNormalize:(CGPoint)vect {
+    float vectMagnitude = powf(powf(vect.x, 2) + powf(vect.y, 2), 0.5);
+    return ccp(vect.x / vectMagnitude, vect.y / vectMagnitude);
+}
+
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile world:(CCNode *)world {
     Projectile *myProjectile = (Projectile *)projectile;
+    CGPoint pushDirection = [Gameplay vectorNormalize:projectile.physicsBody.velocity];
+    if(projectile == nil){
+        int randAngle = arc4random() % 360;
+        pushDirection = ccp(EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*cos(randAngle),
+                            EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*sin(randAngle));
+        return;
+    }
     [self detonateProjectile:myProjectile atPosition:myProjectile.position inCCNode:_physicsNode];
     if(world.physicsBody.type == CCPhysicsBodyTypeDynamic){
-        [world.physicsBody applyImpulse:ccp(0, 500)];
+        CGPoint physBoxLaunchVect = ccp(EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*pushDirection.x,
+                                        EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*pushDirection.y);
+        [world.physicsBody applyImpulse:physBoxLaunchVect atLocalPoint:projectile.position];
     }
 }
 
