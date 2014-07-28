@@ -15,7 +15,7 @@
 #import "ScoreScreen.h"
 
 //static const float PLAYER_COLLISION_TOLERANCE = 5000;
-static const int NUMBER_OF_LEVELS = 16;
+static const int NUMBER_OF_LEVELS = 20;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
@@ -112,10 +112,14 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 }
 
 +(NSMutableDictionary *)generateEmptyLevelProgress {
+    float empty = 0.f;
+#ifdef DEBUG
+    empty = 3600.f;
+#endif
     NSMutableDictionary *temp = [@{} mutableCopy];
     for(int i = 0; i < NUMBER_OF_LEVELS; i++){
         NSString *keyName = [NSString stringWithFormat:@"Levels/Level%i", i+1];
-        [temp setObject:@0.f forKey:keyName];
+        [temp setObject:@(empty) forKey:keyName];
     }
     return temp;
 }

@@ -7,8 +7,19 @@
 //
 
 #import "MainScene.h"
+#import "Gameplay.h"
 
 @implementation MainScene
+
+-(void)didLoadFromCCB {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *levelProgress = [userDefaults objectForKey:@"levelProgress"];
+    if(levelProgress == nil){
+        levelProgress = [Gameplay generateEmptyLevelProgress];
+    }
+    [userDefaults setObject:levelProgress forKey:@"levelProgress"];
+    [userDefaults synchronize];
+}
 
 -(void)play {
     CCScene *gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
