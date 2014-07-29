@@ -15,7 +15,7 @@
 #import "ScoreScreen.h"
 
 //static const float PLAYER_COLLISION_TOLERANCE = 5000;
-static const int NUMBER_OF_LEVELS = 22;
+static const int NUMBER_OF_LEVELS = 25;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
@@ -39,6 +39,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     CCNode *_contentNode;
     CCAction *_followPlayer;
     CCNode *_pauseScreen;
+    CGPoint _pushDirection;
 //    NSString *_currentLevel;                                              //relative filepath to current level
 //    CCLabelTTF *_timerLabel;                                              //broken 7/11/14
 }
@@ -280,16 +281,21 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     return ccp(vect.x / vectMagnitude, vect.y / vectMagnitude);
 }
 
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile world:(CCNode *)world {
+    _pushDirection = [Gameplay vectorNormalize:projectile.physicsBody.velocity];
+    return TRUE;
+}
+
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile world:(CCNode *)world {
     Projectile *myProjectile = (Projectile *)projectile;
-    CGPoint pushDirection = [Gameplay vectorNormalize:projectile.physicsBody.velocity];
     if(projectile == nil){
         return;
     }
     [self detonateProjectile:myProjectile atPosition:myProjectile.position inCCNode:_physicsNode];
+    
     if(world.physicsBody.type == CCPhysicsBodyTypeDynamic){
-        CGPoint physBoxLaunchVect = ccp(EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*pushDirection.x,
-                                        EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*pushDirection.y);
+        CGPoint physBoxLaunchVect = ccp(EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*_pushDirection.x,
+                                        EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*_pushDirection.y);
         [world.physicsBody applyImpulse:physBoxLaunchVect atLocalPoint:projectile.position];
     }
 }
@@ -304,6 +310,9 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 }
 
 -(void)saveProgress {
+    if([_currentLevel isEqualToString:@"Levels/Credits"]){
+        return;
+    }
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     float record = [(NSNumber *)[_levelProgress objectForKey:_currentLevel] floatValue];
     if(record == 0 || record > _timeElapsed){

@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>20</integer>
+	<integer>21</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -797,7 +797,7 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>19</integer>
+				<integer>20</integer>
 				<key>baseClass</key>
 				<string>CCSprite</string>
 				<key>children</key>
@@ -805,7 +805,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>arrowblack</string>
+				<string>arrowwhite</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -827,8 +827,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>701</real>
-							<real>815</real>
+							<real>720</real>
+							<real>821</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -874,7 +874,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>CustomAssets/arrowblack.png</string>
+							<string>CustomAssets/arrowwhite.png</string>
 						</array>
 					</dict>
 					<dict>
