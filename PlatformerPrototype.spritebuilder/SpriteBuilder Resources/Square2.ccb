@@ -140,7 +140,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>DynamicSquare</string>
+		<string>Square</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -150,9 +150,9 @@
 		<key>physicsBody</key>
 		<dict>
 			<key>affectedByGravity</key>
-			<true/>
+			<false/>
 			<key>allowsRotation</key>
-			<true/>
+			<false/>
 			<key>bodyShape</key>
 			<integer>0</integer>
 			<key>collisionCategories</key>
@@ -160,13 +160,13 @@
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>world</string>
+			<string></string>
 			<key>cornerRadius</key>
-			<real>2</real>
+			<real>1</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
-			<true/>
+			<false/>
 			<key>elasticity</key>
 			<real>0.0</real>
 			<key>friction</key>
@@ -182,11 +182,11 @@
 					<real>300</real>
 				</array>
 				<array>
-					<real>300</real>
+					<real>600</real>
 					<real>300</real>
 				</array>
 				<array>
-					<real>300</real>
+					<real>600</real>
 					<real>0.0</real>
 				</array>
 			</array>
@@ -194,11 +194,11 @@
 			<array>
 				<array>
 					<array>
-						<real>300</real>
+						<real>600</real>
 						<real>0.0</real>
 					</array>
 					<array>
-						<real>300</real>
+						<real>600</real>
 						<real>300</real>
 					</array>
 					<array>
@@ -220,7 +220,7 @@
 				<key>type</key>
 				<string>StringSimple</string>
 				<key>value</key>
-				<string></string>
+				<string>Square2</string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -243,7 +243,7 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>300</real>
+					<real>600</real>
 					<real>300</real>
 					<integer>0</integer>
 					<integer>0</integer>

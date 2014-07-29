@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "CCSprite.h"
+#import "CCNode.h"
 
-@interface Square : CCSprite
+@interface Square : CCNode
 
 @end

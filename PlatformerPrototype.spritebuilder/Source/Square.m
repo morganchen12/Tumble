@@ -12,6 +12,7 @@
 
 -(void)didLoadFromCCB {
     self.physicsBody.collisionGroup = @"worldBrushes";
+    self.physicsBody.collisionType = @"world";
 }
 
 @end

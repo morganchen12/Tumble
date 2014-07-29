@@ -221,10 +221,10 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>500</real>
-							<real>500</real>
-							<integer>0</integer>
-							<integer>0</integer>
+							<real>1</real>
+							<real>1</real>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -234,10 +234,10 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<integer>0</integer>
-							<integer>0</integer>
+							<real>1</real>
+							<real>1</real>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -267,7 +267,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>CustomAssets/square.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -291,7 +291,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>CustomAssets/square.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -331,7 +331,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>CustomAssets/square.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -350,7 +350,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>CustomAssets/square.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>

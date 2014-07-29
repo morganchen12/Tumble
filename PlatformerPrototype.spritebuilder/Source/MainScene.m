@@ -23,6 +23,8 @@
 
 -(void)play {
     CCScene *gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
+//    CCColor *white = [CCColor colorWithWhite:1 alpha:1];
+//    CCTransition *transition = [CCTransition transitionFadeWithColor:white duration:0.5f];
     [[CCDirector sharedDirector] replaceScene:gameplayScene];
 }
 

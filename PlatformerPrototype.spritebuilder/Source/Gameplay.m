@@ -15,7 +15,7 @@
 #import "ScoreScreen.h"
 
 //static const float PLAYER_COLLISION_TOLERANCE = 5000;
-static const int NUMBER_OF_LEVELS = 20;
+static const int NUMBER_OF_LEVELS = 22;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
@@ -45,13 +45,13 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 
 -(void)onEnter {
     [super onEnter];
-    [_motionManager startAccelerometerUpdates];
     _level = [CCBReader load:_currentLevel owner:self];           //load in level with owner:self to access player
+    _followPlayer = [CCActionFollow actionWithTarget:_player worldBoundary:_level.boundingBox];
+    [_contentNode runAction:_followPlayer];
     _physicsNode.contentSize = _level.contentSize;
     _physicsNode.collisionDelegate = self;
     [_physicsNode addChild:_level];
-    _followPlayer = [CCActionFollow actionWithTarget:_player worldBoundary:_level.boundingBox];
-    [_contentNode runAction:_followPlayer];
+    [_motionManager startAccelerometerUpdates];
     self.multipleTouchEnabled = TRUE;
     self.userInteractionEnabled = TRUE;
 }
@@ -142,10 +142,10 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     CGPoint touchLocation = [touch locationInNode:_physicsNode];
     if(touchLocation.x - _player.position.x == 0){
         if(touchLocation.y > _player.position.y){ //calculate angle to shoot while avoiding divide by 0 errors
-            _angleToShootAt = M_PI / -2;
+            _angleToShootAt = M_PI / 2;
         }
         else {
-            _angleToShootAt = M_PI / 2;
+            _angleToShootAt = M_PI / -2;
         }
         return;
     }
@@ -257,7 +257,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     CCScene *levelScene = [CCBReader loadAsScene:@"Gameplay"];
     Gameplay *gameplay = levelScene.children[0];
     gameplay.currentLevel = self.currentLevel;
-    [[CCDirector sharedDirector] replaceScene:levelScene]; //reload level upon death, keep timer time
+    [[CCDirector sharedDirector] replaceScene:levelScene];
 }
 
 -(NSString *)convertTimeToString:(float)time {
@@ -284,9 +284,6 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     Projectile *myProjectile = (Projectile *)projectile;
     CGPoint pushDirection = [Gameplay vectorNormalize:projectile.physicsBody.velocity];
     if(projectile == nil){
-//        int randAngle = arc4random() % 360;
-//        pushDirection = ccp(EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*cos(randAngle),
-//                            EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*sin(randAngle));
         return;
     }
     [self detonateProjectile:myProjectile atPosition:myProjectile.position inCCNode:_physicsNode];

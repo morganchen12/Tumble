@@ -463,8 +463,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -536,7 +534,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>1</string>
+							<string>Level 1</string>
 							<false/>
 						</array>
 					</dict>
@@ -685,6 +683,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

@@ -9,7 +9,7 @@
 #import "PhysRotateSquare.h"
 
 @implementation PhysRotateSquare {
-    CCSprite *_square;
+    CCNode *_square;
     CCNode *_pivotNode;
 }
 
