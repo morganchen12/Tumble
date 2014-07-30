@@ -54,12 +54,32 @@
     
     [self setupCocos2dWithOptions:cocos2dSetup];
     
+    [MGWU loadMGWU:@"mgwu20113994706121613196"];
+    [MGWU preFacebook]; //Temporarily disables Facebook until you integrate it later
+    
     return YES;
 }
 
 - (CCScene*) startScene
 {
     return [CCBReader loadAsScene:@"MainScene"];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)tokenId {
+    [MGWU registerForPush:tokenId];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [MGWU gotPush:userInfo];
+}
+
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error{
+    [MGWU failedPush:error];
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    [MGWU gotLocalPush:notification];
 }
 
 @end

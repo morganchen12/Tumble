@@ -12,13 +12,11 @@
 @implementation MainScene
 
 -(void)didLoadFromCCB {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *levelProgress = [userDefaults objectForKey:@"levelProgress"];
+    NSDictionary *levelProgress = [MGWU objectForKey:@"levelProgress"];
     if(levelProgress == nil){
         levelProgress = [Gameplay generateEmptyLevelProgress];
     }
-    [userDefaults setObject:levelProgress forKey:@"levelProgress"];
-    [userDefaults synchronize];
+    [MGWU setObject:levelProgress forKey:@"levelProgress"];
 }
 
 -(void)play {
@@ -26,6 +24,15 @@
 //    CCColor *white = [CCColor colorWithWhite:1 alpha:1];
 //    CCTransition *transition = [CCTransition transitionFadeWithColor:white duration:0.5f];
     [[CCDirector sharedDirector] replaceScene:gameplayScene];
+}
+
+-(void)levelSelect {
+    CCScene *levelSelectScene = [CCBReader loadAsScene:@"LevelSelect"];
+    [[CCDirector sharedDirector] replaceScene:levelSelectScene];
+}
+
+-(void)crossPromo {
+    [MGWU displayCrossPromo];
 }
 
 @end

@@ -268,7 +268,7 @@
 						<key>value</key>
 						<array>
 							<real>924</real>
-							<real>245.00003051757812</real>
+							<real>242</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2655,8 +2655,6 @@ boxes</string>
 						<string>Platform3.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

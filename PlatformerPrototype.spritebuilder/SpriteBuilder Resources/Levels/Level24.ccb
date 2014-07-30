@@ -329,8 +329,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>282</real>
-							<real>662</real>
+							<real>500</real>
+							<real>1100</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -366,7 +366,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>180</real>
+						<real>135</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -393,6 +393,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -455,8 +457,6 @@
 						<string>Player.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

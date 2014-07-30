@@ -11,14 +11,12 @@
 
 @implementation LevelSelect {
     CCNode *_layoutNode;
-    NSUserDefaults *_userDefaults;
     NSDictionary *_levelProgress;
     int _levelsUnlocked;
 }
 
 -(void)didLoadFromCCB{
-    _userDefaults = [NSUserDefaults standardUserDefaults];
-    _levelProgress = [_userDefaults objectForKey:@"levelProgress"];
+    _levelProgress = [MGWU objectForKey:@"levelProgress"];
     self.userInteractionEnabled = YES;
     _levelsUnlocked = 1; //loop sets _levelsUnlocked to number of levels beaten + 1
     for(id key in _levelProgress){
@@ -44,6 +42,11 @@
         levelDisplay.time = levelTime;
         [_layoutNode addChild:levelDisplay];
     }
+}
+
+-(void)onEnter {
+    [super onEnter];
+    self.paused = TRUE;
 }
 
 @end

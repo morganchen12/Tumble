@@ -97,12 +97,10 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 }
 
 -(void)didLoadFromCCB {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *levelProgressUnmutable = (NSDictionary *)[userDefaults objectForKey:@"levelProgress"];
+    NSDictionary *levelProgressUnmutable = (NSDictionary *)[MGWU objectForKey:@"levelProgress"];
     _levelProgress = [levelProgressUnmutable mutableCopy];
     if(_levelProgress == nil){
         _levelProgress = [Gameplay generateEmptyLevelProgress];
-        [userDefaults synchronize];
     }
 #ifdef DEBUG
     [[CCDirector sharedDirector] setDisplayStats:YES];  //debug fps counter
@@ -316,13 +314,17 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     if([_currentLevel isEqualToString:@"Levels/Credits"]){
         return;
     }
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     float record = [(NSNumber *)[_levelProgress objectForKey:_currentLevel] floatValue];
     if(record == 0 || record > _timeElapsed){
         [_levelProgress setObject:@(_timeElapsed) forKey:_currentLevel];
-        [userDefaults setObject:_levelProgress forKey:@"levelProgress"];
-        [userDefaults synchronize];
+        [MGWU setObject:_levelProgress forKey:@"levelProgress"];
     }
+}
+
+-(void)recordAnalytics {
+    NSDictionary *params = @{@"levelName": _currentLevel,
+                             @"time": @(_timeElapsed)};
+    [MGWU logEvent:@"levelComplete" withParams:params];
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair player:(CCNode *)player endTrigger:(CCNode *)endTrigger {
@@ -342,6 +344,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     scoreScreen.ownerNode = self;
     [self addChild:scoreScreen];
     [self saveProgress];
+    [self recordAnalytics];
     
     return TRUE;
 }
