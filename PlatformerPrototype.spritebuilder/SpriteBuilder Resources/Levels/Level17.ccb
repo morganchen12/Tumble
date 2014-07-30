@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>20</integer>
+	<integer>27</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -170,8 +170,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>450</real>
-							<real>1293</real>
+							<real>453</real>
+							<real>1006</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -199,6 +199,8 @@
 						<string>EndTrigger.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -388,68 +390,6 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>9</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Square</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>450</real>
-							<real>1050</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Square.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
 				<integer>19</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
@@ -517,8 +457,6 @@
 						<string>Square2.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -711,6 +649,192 @@
 							<real>1</real>
 							<real>1</real>
 						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>20</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>Square</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>-150</real>
+							<real>300</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>Square.ccb</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>23</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>Square</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>1050</real>
+							<real>300</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>Square.ccb</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>26</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>Square</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>450</real>
+							<real>900</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>Platform.ccb</string>
 					</dict>
 				</array>
 			</dict>

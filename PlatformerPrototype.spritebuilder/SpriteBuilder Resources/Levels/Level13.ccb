@@ -137,8 +137,6 @@
 						<real>1</real>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -172,7 +170,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>1288</real>
+							<real>1212</real>
 							<real>1047</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -201,6 +199,8 @@
 						<string>EndTrigger.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -606,7 +606,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>1228</real>
+							<real>1150</real>
 							<real>743</real>
 							<integer>0</integer>
 							<integer>0</integer>

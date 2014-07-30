@@ -226,6 +226,17 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 }
 
 -(void)update:(CCTime)delta {
+    _timeElapsed += delta;                                                          //increment timer
+    
+    if(_coolDown > 0) {
+        _coolDown--;
+    }
+    else if(_shooting){
+        [self shoot];
+    }
+}
+
+-(void)fixedUpdate:(CCTime)delta {
     CMAcceleration acceleration = _motionManager.accelerometerData.acceleration;    //move player on device tilt
     float accel = acceleration.y;
     if(fabs(_player.physicsBody.velocity.x) > PLAYER_XVEL_CAP){
@@ -237,15 +248,6 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
         }
     }
     [_player.physicsBody applyImpulse:ccp(accel * PLAYER_ACCEL_MULTIPLIER, 0)];
-    
-    _timeElapsed += delta;
-    
-    if(_coolDown > 0) {
-        _coolDown--;
-    }
-    else if(_shooting){
-        [self shoot];
-    }
     
     if(_player.position.x < 0 ||                                                    //check if player exits worldbounds
        _player.position.y < 0 ||
