@@ -268,7 +268,7 @@
 						<key>value</key>
 						<array>
 							<real>443.00003051757812</real>
-							<real>596</real>
+							<real>592</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -296,6 +296,8 @@
 						<string>EndTrigger.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1490,8 +1492,6 @@
 						<string>Square2.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

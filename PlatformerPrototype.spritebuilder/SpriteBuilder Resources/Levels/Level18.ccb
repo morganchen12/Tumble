@@ -171,7 +171,7 @@
 						<key>value</key>
 						<array>
 							<real>1418</real>
-							<real>1505</real>
+							<real>1501</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -199,6 +199,8 @@
 						<string>EndTrigger.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -296,8 +298,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

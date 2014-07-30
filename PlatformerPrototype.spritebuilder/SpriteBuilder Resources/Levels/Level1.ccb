@@ -260,7 +260,7 @@
 						<key>value</key>
 						<array>
 							<real>957</real>
-							<real>246.00003051757812</real>
+							<real>242</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -288,6 +288,8 @@
 						<string>EndTrigger.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1697,8 +1699,6 @@ to move</string>
 						<string>Platform3.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

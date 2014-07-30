@@ -171,7 +171,7 @@
 						<key>value</key>
 						<array>
 							<real>1418</real>
-							<real>1506</real>
+							<real>1502</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -296,8 +296,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
