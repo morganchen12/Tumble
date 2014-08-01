@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>CustomAssets/arrowblack.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1235, 3051}, {364, 434}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {364, 434}}</string>
+			<key>sourceSize</key>
+			<string>{364, 434}</string>
+		</dict>
+		<key>CustomAssets/arrowwhite.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1235, 2615}, {364, 434}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {364, 434}}</string>
+			<key>sourceSize</key>
+			<string>{364, 434}</string>
+		</dict>
+		<key>CustomAssets/bg.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {2048, 1536}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {2048, 1536}}</string>
+			<key>sourceSize</key>
+			<string>{2048, 1536}</string>
+		</dict>
+		<key>CustomAssets/buttonblack.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3997, 437}, {48, 48}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {48, 48}}</string>
+			<key>sourceSize</key>
+			<string>{48, 48}</string>
+		</dict>
+		<key>CustomAssets/buttonwhite.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3947, 437}, {48, 48}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {48, 48}}</string>
+			<key>sourceSize</key>
+			<string>{48, 48}</string>
+		</dict>
+		<key>CustomAssets/circle.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2051, 1}, {1712, 1712}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{144, 144}, {1712, 1712}}</string>
+			<key>sourceSize</key>
+			<string>{2000, 2000}</string>
+		</dict>
+		<key>CustomAssets/circleSmall.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3765, 449}, {172, 172}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 14}, {172, 172}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>CustomAssets/danger.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1235, 2117}, {496, 478}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 2}, {496, 478}}</string>
+			<key>sourceSize</key>
+			<string>{500, 480}</string>
+		</dict>
+		<key>CustomAssets/flag.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1235, 1539}, {576, 732}}</string>
+			<key>offset</key>
+			<string>{-7, -10}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 20}, {576, 732}}</string>
+			<key>sourceSize</key>
+			<string>{590, 752}</string>
+		</dict>
+		<key>CustomAssets/mgwu-icon-200.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3765, 311}, {180, 136}}</string>
+			<key>offset</key>
+			<string>{1, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 35}, {180, 136}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>CustomAssets/mgwu-icon.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1235, 3487}, {400, 400}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {400, 400}}</string>
+			<key>sourceSize</key>
+			<string>{400, 400}</string>
+		</dict>
+		<key>CustomAssets/square.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1539}, {1232, 1232}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{384, 384}, {1232, 1232}}</string>
+			<key>sourceSize</key>
+			<string>{2000, 2000}</string>
+		</dict>
+		<key>CustomAssets/square200.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3947, 311}, {124, 124}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{38, 38}, {124, 124}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>CustomAssets/square500.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3765, 1}, {308, 308}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{96, 96}, {308, 308}}</string>
+			<key>sourceSize</key>
+			<string>{500, 500}</string>
+		</dict>
+		<key>CustomAssets/squareSmall.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{4047, 437}, {32, 32}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {32, 32}}</string>
+			<key>sourceSize</key>
+			<string>{32, 32}</string>
+		</dict>
+		<key>CustomAssets/squarebackup.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 2773}, {1232, 1232}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{384, 384}, {1232, 1232}}</string>
+			<key>sourceSize</key>
+			<string>{2000, 2000}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{4096, 4096}</string>
+		<key>textureFileName</key>
+		<string>CustomAssets.png</string>
+	</dict>
+</dict>
+</plist>
