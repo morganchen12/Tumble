@@ -7,7 +7,7 @@
 		<key>CustomAssets/arrowblack.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{311, 770}, {91, 108}}</string>
+			<string>{{1, 853}, {91, 108}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -20,7 +20,7 @@
 		<key>CustomAssets/arrowwhite.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{311, 660}, {91, 108}}</string>
+			<string>{{1, 743}, {91, 108}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -30,23 +30,10 @@
 			<key>sourceSize</key>
 			<string>{91, 108}</string>
 		</dict>
-		<key>CustomAssets/bg.png</key>
-		<dict>
-			<key>frame</key>
-			<string>{{1, 1}, {512, 384}}</string>
-			<key>offset</key>
-			<string>{0, 0}</string>
-			<key>rotated</key>
-			<false/>
-			<key>sourceColorRect</key>
-			<string>{{0, 0}, {512, 384}}</string>
-			<key>sourceSize</key>
-			<string>{512, 384}</string>
-		</dict>
 		<key>CustomAssets/buttonblack.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1007, 80}, {12, 12}}</string>
+			<string>{{15, 1011}, {12, 12}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -59,7 +46,7 @@
 		<key>CustomAssets/buttonwhite.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{993, 80}, {12, 12}}</string>
+			<string>{{1, 1011}, {12, 12}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -72,7 +59,7 @@
 		<key>CustomAssets/circle.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{515, 1}, {428, 428}}</string>
+			<string>{{1, 1}, {428, 428}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -85,7 +72,7 @@
 		<key>CustomAssets/circleSmall.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{945, 117}, {44, 44}}</string>
+			<string>{{38, 963}, {44, 44}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -98,7 +85,7 @@
 		<key>CustomAssets/danger.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{311, 533}, {125, 120}}</string>
+			<string>{{1, 616}, {125, 120}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -111,11 +98,11 @@
 		<key>CustomAssets/flag.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{311, 387}, {144, 183}}</string>
+			<string>{{1, 431}, {144, 183}}</string>
 			<key>offset</key>
 			<string>{-1, -2}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceColorRect</key>
 			<string>{{0, 5}, {144, 183}}</string>
 			<key>sourceSize</key>
@@ -124,11 +111,11 @@
 		<key>CustomAssets/mgwu-icon-200.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{945, 80}, {46, 35}}</string>
+			<string>{{1, 963}, {46, 35}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceColorRect</key>
 			<string>{{2, 8}, {46, 35}}</string>
 			<key>sourceSize</key>
@@ -137,7 +124,7 @@
 		<key>CustomAssets/mgwu-icon.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{311, 880}, {100, 100}}</string>
+			<string>{{94, 743}, {100, 100}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -147,23 +134,10 @@
 			<key>sourceSize</key>
 			<string>{100, 100}</string>
 		</dict>
-		<key>CustomAssets/square.png</key>
-		<dict>
-			<key>frame</key>
-			<string>{{1, 387}, {308, 308}}</string>
-			<key>offset</key>
-			<string>{0, 0}</string>
-			<key>rotated</key>
-			<false/>
-			<key>sourceColorRect</key>
-			<string>{{96, 96}, {308, 308}}</string>
-			<key>sourceSize</key>
-			<string>{500, 500}</string>
-		</dict>
 		<key>CustomAssets/square200.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{991, 117}, {32, 32}}</string>
+			<string>{{84, 963}, {32, 32}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -176,7 +150,7 @@
 		<key>CustomAssets/square500.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{945, 1}, {77, 77}}</string>
+			<string>{{94, 845}, {77, 77}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -189,7 +163,7 @@
 		<key>CustomAssets/squareSmall.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{993, 94}, {8, 8}}</string>
+			<string>{{29, 1011}, {8, 8}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -198,19 +172,6 @@
 			<string>{{0, 0}, {8, 8}}</string>
 			<key>sourceSize</key>
 			<string>{8, 8}</string>
-		</dict>
-		<key>CustomAssets/squarebackup.png</key>
-		<dict>
-			<key>frame</key>
-			<string>{{1, 697}, {308, 308}}</string>
-			<key>offset</key>
-			<string>{0, 0}</string>
-			<key>rotated</key>
-			<false/>
-			<key>sourceColorRect</key>
-			<string>{{96, 96}, {308, 308}}</string>
-			<key>sourceSize</key>
-			<string>{500, 500}</string>
 		</dict>
 	</dict>
 	<key>metadata</key>
