@@ -225,13 +225,6 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 
 -(void)update:(CCTime)delta {
     _timeElapsed += delta;                                                          //increment timer
-    
-    if(_coolDown > 0) {
-        _coolDown--;
-    }
-    else if(_shooting){
-        [self shoot];
-    }
 }
 
 -(void)fixedUpdate:(CCTime)delta {
@@ -251,6 +244,13 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
        _player.position.y < 0 ||
        _player.position.x > _level.contentSize.width){
         [self restartLevel];
+    }
+    
+    if(_coolDown > 0) {
+        _coolDown--;
+    }
+    else if(_shooting){
+        [self shoot];
     }
 }
 
