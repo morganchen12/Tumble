@@ -84,6 +84,9 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 }
 
 -(void)findCurrentLevel {
+#ifdef DEBUG
+    _currentLevel = @"Levels/Level1";
+#endif
     int levelNumber = 1;
     for(id key in _levelProgress){
         if([(NSNumber *)[_levelProgress objectForKey:key] floatValue] > 0.f){
