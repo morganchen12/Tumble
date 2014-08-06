@@ -10,6 +10,7 @@
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		8D0022E2196DC76D003789F4 /* EndTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0022E1196DC76D003789F4 /* EndTrigger.m */; };
 		8D465D31196C6B580092F9B7 /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D465D30196C6B580092F9B7 /* Square.m */; };
+		8D57B89D19919EF700847F8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57B89C19919EF700847F8B /* Images.xcassets */; };
 		8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E061965C1EC0046095F /* Gameplay.m */; };
 		8D6F5E131965D5F50046095F /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E121965D5F50046095F /* Player.m */; };
 		8D6F5E161965DA740046095F /* Projectile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E151965DA740046095F /* Projectile.m */; };
@@ -157,6 +158,7 @@
 		8D0022E1196DC76D003789F4 /* EndTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EndTrigger.m; path = Source/EndTrigger.m; sourceTree = "<group>"; };
 		8D465D2F196C6B580092F9B7 /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Square.h; path = Source/Square.h; sourceTree = "<group>"; };
 		8D465D30196C6B580092F9B7 /* Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Square.m; path = Source/Square.m; sourceTree = "<group>"; };
+		8D57B89C19919EF700847F8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8D6F5E051965C1EC0046095F /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		8D6F5E061965C1EC0046095F /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; usesTabs = 0; };
 		8D6F5E111965D5F50046095F /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Source/Player.h; sourceTree = "<group>"; };
@@ -282,7 +284,7 @@
 		B73789861807631A0076A88C /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = Source/Prefix.pch; sourceTree = SOURCE_ROOT; };
 		B7378992180767190076A88C /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Source/MainScene.h; sourceTree = "<group>"; };
 		B7378993180767190076A88C /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScene.m; path = Source/MainScene.m; sourceTree = "<group>"; };
-		B77F1B2E17B978D7009739AE /* PlatformerPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformerPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B77F1B2E17B978D7009739AE /* Tumble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77F1B3117B978D7009739AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B77F1B3317B978D7009739AE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		B77F1B3517B978D7009739AE /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -499,6 +501,7 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				8D57B89C19919EF700847F8B /* Images.xcassets */,
 				B737893C1807616C0076A88C /* Source */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
@@ -511,7 +514,7 @@
 		B77F1B2F17B978D7009739AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B77F1B2E17B978D7009739AE /* PlatformerPrototype.app */,
+				B77F1B2E17B978D7009739AE /* Tumble.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -569,9 +572,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B77F1B2D17B978D7009739AE /* PlatformerPrototype */ = {
+		B77F1B2D17B978D7009739AE /* Tumble */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "PlatformerPrototype" */;
+			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "Tumble" */;
 			buildPhases = (
 				D2E0167A18D782EC00927430 /* Run Script */,
 				B77F1B2A17B978D7009739AE /* Sources */,
@@ -583,9 +586,9 @@
 			dependencies = (
 				B7378989180764180076A88C /* PBXTargetDependency */,
 			);
-			name = PlatformerPrototype;
+			name = Tumble;
 			productName = Example;
-			productReference = B77F1B2E17B978D7009739AE /* PlatformerPrototype.app */;
+			productReference = B77F1B2E17B978D7009739AE /* Tumble.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -607,7 +610,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "PlatformerPrototype" */;
+			buildConfigurationList = B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "Tumble" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -625,7 +628,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				B77F1B2D17B978D7009739AE /* PlatformerPrototype */,
+				B77F1B2D17B978D7009739AE /* Tumble */,
 			);
 		};
 /* End PBXProject section */
@@ -679,6 +682,7 @@
 				8DE99B6E198990B700C77A06 /* MGWUAboutFooter-Portrait@2x~iphone.png in Resources */,
 				8DE99B75198990B700C77A06 /* MGWUBackground-Portrait@2x~ipad.png in Resources */,
 				8DE99B6D198990B700C77A06 /* MGWUAboutFooter-Portrait@2x~ipad.png in Resources */,
+				8D57B89D19919EF700847F8B /* Images.xcassets in Resources */,
 				8DE99B78198990B700C77A06 /* MGWUBackground-Portrait~iphone.png in Resources */,
 				8DE99B93198990B700C77A06 /* send-button-inactive.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
@@ -850,6 +854,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -878,7 +883,7 @@
 					"-ObjC",
 					"-lsqlite3.0",
 				);
-				PRODUCT_NAME = PlatformerPrototype;
+				PRODUCT_NAME = Tumble;
 				PROVISIONING_PROFILE = "D0190417-620E-479A-82FE-5BF5C154209A";
 				WRAPPER_EXTENSION = app;
 			};
@@ -888,6 +893,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -914,7 +920,7 @@
 					"-ObjC",
 					"-lsqlite3.0",
 				);
-				PRODUCT_NAME = PlatformerPrototype;
+				PRODUCT_NAME = Tumble;
 				PROVISIONING_PROFILE = "D0190417-620E-479A-82FE-5BF5C154209A";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -924,7 +930,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "PlatformerPrototype" */ = {
+		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "Tumble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77F1CDC17B978D8009739AE /* Debug */,
@@ -933,7 +939,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "PlatformerPrototype" */ = {
+		B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "Tumble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77F1CDF17B978D8009739AE /* Debug */,
