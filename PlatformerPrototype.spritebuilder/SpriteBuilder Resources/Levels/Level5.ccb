@@ -718,7 +718,7 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>50</real>
+							<real>40</real>
 							<real>600</real>
 							<integer>0</integer>
 							<integer>0</integer>
