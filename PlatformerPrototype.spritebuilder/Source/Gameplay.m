@@ -85,7 +85,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 -(void)findCurrentLevel {
 #ifdef DEBUG
     _currentLevel = @"Levels/Level1";
-//    _currentLevel = @"Levels/Credits";
+    _currentLevel = @"Levels/Credits";
     return;
 #endif
     int levelNumber = 1;

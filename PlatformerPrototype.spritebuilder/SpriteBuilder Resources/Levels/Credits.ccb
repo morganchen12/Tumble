@@ -940,7 +940,7 @@
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
-				<string></string>
+				<string>DynamicObstacle</string>
 				<key>displayName</key>
 				<string>mgwu-icon-200</string>
 				<key>memberVarAssignmentName</key>
