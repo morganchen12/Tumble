@@ -962,9 +962,9 @@
 					<key>collisionType</key>
 					<string>world</string>
 					<key>cornerRadius</key>
-					<real>0.0</real>
+					<real>1</real>
 					<key>density</key>
-					<real>125</real>
+					<real>50</real>
 					<key>dynamic</key>
 					<true/>
 					<key>elasticity</key>
@@ -974,8 +974,8 @@
 					<key>points</key>
 					<array>
 						<array>
-							<real>1.990364670753479</real>
-							<real>29.419061660766602</real>
+							<real>2.2451171875</real>
+							<real>29.495607376098633</real>
 						</array>
 						<array>
 							<real>13.022810935974121</real>
@@ -1014,8 +1014,8 @@
 								<real>41.571109771728516</real>
 							</array>
 							<array>
-								<real>1.990364670753479</real>
-								<real>29.419061660766602</real>
+								<real>2.2451171875</real>
+								<real>29.495607376098633</real>
 							</array>
 						</array>
 					</array>
