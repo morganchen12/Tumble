@@ -35,7 +35,12 @@ static const float DAMPING_MAGNITUDE = 0.95;
 
 -(void)fixedUpdate:(CCTime)delta {
     if(fabs(self.physicsBody.angularVelocity) > ROTATION_TOLERANCE){
-        self.physicsBody.angularVelocity = (self.physicsBody.angularVelocity - ROTATION_TOLERANCE)*DAMPING_MAGNITUDE + ROTATION_TOLERANCE;
+        if(self.physicsBody.angularVelocity >= 0){
+            self.physicsBody.angularVelocity = (self.physicsBody.angularVelocity - ROTATION_TOLERANCE)*DAMPING_MAGNITUDE + ROTATION_TOLERANCE;
+        }
+        else {
+            self.physicsBody.angularVelocity = (self.physicsBody.angularVelocity + ROTATION_TOLERANCE)*DAMPING_MAGNITUDE - ROTATION_TOLERANCE;
+        }
     }
 }
 
