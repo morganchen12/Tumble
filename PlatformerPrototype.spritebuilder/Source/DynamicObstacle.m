@@ -9,7 +9,7 @@
 #import "DynamicObstacle.h"
 #import "CCPhysics+ObjectiveChipmunk.h"
 
-static const float ROTATION_TOLERANCE = M_PI;                              //max angular velocity in rad/sec before damping
+static const float ROTATION_TOLERANCE = M_PI*2;                              //max angular velocity in rad/sec before damping
 static const float DAMPING_MAGNITUDE = 0.95;
 
 @implementation DynamicObstacle
