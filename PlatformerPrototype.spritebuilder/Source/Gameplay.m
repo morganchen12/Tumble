@@ -41,7 +41,6 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     CCNode *_pauseScreen;
     CGPoint _pushDirection;
 //    NSString *_currentLevel;                                              //relative filepath to current level
-//    CCLabelTTF *_timerLabel;                                              //broken 7/11/14
 }
 
 -(void)onEnter {
@@ -86,6 +85,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 -(void)findCurrentLevel {
 #ifdef DEBUG
     _currentLevel = @"Levels/Level1";
+    _currentLevel = @"Levels/Credits";
     return;
 #endif
     int levelNumber = 1;

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		8D0022E2196DC76D003789F4 /* EndTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0022E1196DC76D003789F4 /* EndTrigger.m */; };
+		8D0549AB1993ED5100B9EA5F /* DynamicObstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0549AA1993ED5100B9EA5F /* DynamicObstacle.m */; };
 		8D465D31196C6B580092F9B7 /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D465D30196C6B580092F9B7 /* Square.m */; };
 		8D57B89D19919EF700847F8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57B89C19919EF700847F8B /* Images.xcassets */; };
 		8D6F5E071965C1EC0046095F /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E061965C1EC0046095F /* Gameplay.m */; };
@@ -156,6 +157,8 @@
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		8D0022E0196DC76D003789F4 /* EndTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EndTrigger.h; path = Source/EndTrigger.h; sourceTree = "<group>"; };
 		8D0022E1196DC76D003789F4 /* EndTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EndTrigger.m; path = Source/EndTrigger.m; sourceTree = "<group>"; };
+		8D0549A91993ED5100B9EA5F /* DynamicObstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicObstacle.h; path = Source/DynamicObstacle.h; sourceTree = "<group>"; };
+		8D0549AA1993ED5100B9EA5F /* DynamicObstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DynamicObstacle.m; path = Source/DynamicObstacle.m; sourceTree = "<group>"; };
 		8D465D2F196C6B580092F9B7 /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Square.h; path = Source/Square.h; sourceTree = "<group>"; };
 		8D465D30196C6B580092F9B7 /* Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Square.m; path = Source/Square.m; sourceTree = "<group>"; };
 		8D57B89C19919EF700847F8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -452,6 +455,8 @@
 				8D8A7825197D80130034CD51 /* ClockwiseSquare.h */,
 				8D8A7826197D80130034CD51 /* ClockwiseSquare.m */,
 				8D792A271974927F00AE52B2 /* ScoreScreen.h */,
+				8D0549A91993ED5100B9EA5F /* DynamicObstacle.h */,
+				8D0549AA1993ED5100B9EA5F /* DynamicObstacle.m */,
 				8D792A281974927F00AE52B2 /* ScoreScreen.m */,
 				8D792A211974908A00AE52B2 /* Level.h */,
 				8D792A221974908A00AE52B2 /* Level.m */,
@@ -769,6 +774,7 @@
 				8DAC27A31980533900639BC5 /* PhysRotateSquare.m in Sources */,
 				8DAC27A01980224B00639BC5 /* LevelSelect.m in Sources */,
 				8D0022E2196DC76D003789F4 /* EndTrigger.m in Sources */,
+				8D0549AB1993ED5100B9EA5F /* DynamicObstacle.m in Sources */,
 				8D792A231974908A00AE52B2 /* Level.m in Sources */,
 				8D6F5E161965DA740046095F /* Projectile.m in Sources */,
 				8D465D31196C6B580092F9B7 /* Square.m in Sources */,
