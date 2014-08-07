@@ -40,7 +40,6 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     CCAction *_followPlayer;
     CCNode *_pauseScreen;
     CGPoint _pushDirection;
-    int _deaths;
 //    NSString *_currentLevel;                                              //relative filepath to current level
 }
 
@@ -248,6 +247,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     if(_player.position.x < 0 ||                                                    //check if player exits worldbounds
        _player.position.y < 0 ||
        _player.position.x > _level.contentSize.width){
+        [self recordDeath];
         [self restartLevel];
     }
     
@@ -328,17 +328,17 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 
 -(void)recordAnalytics {
     NSDictionary *params = @{@"levelName": _currentLevel,
-                             @"time": @(_timeElapsed),
-                             @"numDeaths": @(_deaths)};
+                             @"timeElapsed": @(_timeElapsed)
+                             };
     [MGWU logEvent:@"levelComplete" withParams:params];
 }
 
 -(void)recordDeath {
-    _deaths++;
     NSDictionary *params = @{@"levelName": _currentLevel,
-                             @"time": @(_timeElapsed),
+                             @"timeElapsed": @(_timeElapsed),
                              @"positionX": @(_player.position.x),
-                             @"positionY": @(_player.position.y)};
+                             @"positionY": @(_player.position.y)
+                             };
     [MGWU logEvent:@"playerDied" withParams:params];
 }
 
