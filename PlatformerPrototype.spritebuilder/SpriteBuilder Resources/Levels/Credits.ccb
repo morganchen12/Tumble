@@ -840,7 +840,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>505.00006103515625</real>
+							<real>322</real>
 							<real>56.000015258789062</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -964,7 +964,7 @@
 					<key>cornerRadius</key>
 					<real>1</real>
 					<key>density</key>
-					<real>50</real>
+					<real>25</real>
 					<key>dynamic</key>
 					<true/>
 					<key>elasticity</key>
@@ -1037,8 +1037,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>403</real>
-							<real>66</real>
+							<real>322</real>
+							<real>90</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
