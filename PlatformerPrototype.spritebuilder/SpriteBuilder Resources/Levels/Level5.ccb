@@ -718,7 +718,7 @@ sharp edges</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
+							<real>35</real>
 							<real>600</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -755,6 +755,8 @@ sharp edges</string>
 						<string>Square.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
