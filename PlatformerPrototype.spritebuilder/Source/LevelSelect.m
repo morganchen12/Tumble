@@ -28,6 +28,7 @@
         _levelsUnlocked = (int)[_levelProgress count];
     }
     [self populateScreen];
+    self.paused = TRUE;
 }
 
 -(void)populateScreen {

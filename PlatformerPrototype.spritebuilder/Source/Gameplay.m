@@ -302,7 +302,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     if(world.physicsBody.type == CCPhysicsBodyTypeDynamic){
         CGPoint physBoxLaunchVect = ccp(EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*_pushDirection.x,
                                         EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*_pushDirection.y);
-        [world.physicsBody applyImpulse:physBoxLaunchVect atLocalPoint:projectile.position];
+        [world.physicsBody applyImpulse:physBoxLaunchVect atLocalPoint:myProjectile.position];
     }
 }
 
