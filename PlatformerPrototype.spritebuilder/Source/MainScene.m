@@ -7,9 +7,14 @@
 //
 
 #import "MainScene.h"
-#import "Gameplay.h"
+#import "Player.h"
+#import <CoreMotion/CoreMotion.h>
 
-@implementation MainScene
+@implementation MainScene {
+    Player *_player;
+    CCPhysicsNode *_physicsNode;
+    CMMotionManager *_motionManager;
+}
 
 -(void)didLoadFromCCB {
     NSDictionary *levelProgress = [MGWU objectForKey:@"levelProgress"];
@@ -17,6 +22,21 @@
         levelProgress = [Gameplay generateEmptyLevelProgress];
     }
     [MGWU setObject:levelProgress forKey:@"levelProgress"];
+    [_motionManager startAccelerometerUpdates];
+}
+
+-(void)fixedUpdate:(CCTime)delta {
+    CMAcceleration acceleration = _motionManager.accelerometerData.acceleration;    //move player on device tilt
+    float accel = acceleration.y;
+    if(fabs(_player.physicsBody.velocity.x) > 150){
+        if(_player.physicsBody.velocity.x > 0 && accel > 0){
+            accel = 0;
+        }
+        else if(_player.physicsBody.velocity.x < 0 && accel < 0){
+            accel = 0;
+        }
+    }
+    [_player.physicsBody applyImpulse:ccp(accel * 75, 0)];
 }
 
 -(void)play {
