@@ -137,7 +137,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>CustomAssets/circleSmall.png</string>
+					<string>CustomAssets/player.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -154,6 +154,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

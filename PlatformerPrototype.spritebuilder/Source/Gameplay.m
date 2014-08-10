@@ -108,7 +108,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
         _levelProgress = [Gameplay generateEmptyLevelProgress];
     }
 #ifdef DEBUG
-    [[CCDirector sharedDirector] setDisplayStats:YES];  //debug fps counter
+//    [[CCDirector sharedDirector] setDisplayStats:YES];  //debug fps counter
 #endif
     [self findCurrentLevel];
     _shooting = FALSE;

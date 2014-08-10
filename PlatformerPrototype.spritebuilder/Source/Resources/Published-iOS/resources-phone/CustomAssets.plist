@@ -72,7 +72,7 @@
 		<key>CustomAssets/circleSmall.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{38, 963}, {44, 44}}</string>
+			<string>{{84, 963}, {44, 44}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -134,10 +134,23 @@
 			<key>sourceSize</key>
 			<string>{100, 100}</string>
 		</dict>
+		<key>CustomAssets/player.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{38, 963}, {44, 44}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{3, 3}, {44, 44}}</string>
+			<key>sourceSize</key>
+			<string>{50, 50}</string>
+		</dict>
 		<key>CustomAssets/square200.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{84, 963}, {32, 32}}</string>
+			<string>{{94, 924}, {32, 32}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
