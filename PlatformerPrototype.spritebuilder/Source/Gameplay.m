@@ -15,6 +15,7 @@
 #import "ScoreScreen.h"
 
 //static const float PLAYER_COLLISION_TOLERANCE = 5000;
+static const float PLAYER_TURN_MIN_VEL = 5;                                 //cosmetic only
 static const int NUMBER_OF_LEVELS = 25;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
@@ -157,6 +158,13 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     if(touchLocation.x - _player.position.x < 0) {
         _angleToShootAt += M_PI;
     }
+    
+    if(touchLocation.x - _player.position.x < 0){
+        _player.flipX = TRUE;
+    }
+    else if (touchLocation.x - _player.position.x > PLAYER_TURN_MIN_VEL){
+        _player.flipX = FALSE;
+    }
 }
 
 -(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
@@ -173,6 +181,13 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     _angleToShootAt = atan((touchLocation.y - _player.position.y) / (touchLocation.x - _player.position.x));
     if(touchLocation.x - _player.position.x < 0) {
         _angleToShootAt += M_PI;
+    }
+    
+    if(touchLocation.x - _player.position.x < 0){
+        _player.flipX = TRUE;
+    }
+    else if (touchLocation.x - _player.position.x > PLAYER_TURN_MIN_VEL){
+        _player.flipX = FALSE;
     }
 }
 
@@ -256,6 +271,13 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     }
     else if(_shooting){
         [self shoot];
+    }
+    
+    if(_player.physicsBody.velocity.x < -1*PLAYER_TURN_MIN_VEL){
+        _player.flipX = TRUE;
+    }
+    else if (_player.physicsBody.velocity.x > PLAYER_TURN_MIN_VEL){
+        _player.flipX = FALSE;
     }
 }
 
