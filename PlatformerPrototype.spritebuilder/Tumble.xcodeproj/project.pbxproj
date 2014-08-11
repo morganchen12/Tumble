@@ -17,6 +17,7 @@
 		8D6F5E161965DA740046095F /* Projectile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F5E151965DA740046095F /* Projectile.m */; };
 		8D792A231974908A00AE52B2 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D792A221974908A00AE52B2 /* Level.m */; };
 		8D792A291974927F00AE52B2 /* ScoreScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D792A281974927F00AE52B2 /* ScoreScreen.m */; };
+		8D823BEB1999354200AE0150 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D823BEA1999354200AE0150 /* Crashlytics.framework */; };
 		8D8A7827197D80130034CD51 /* ClockwiseSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8A7826197D80130034CD51 /* ClockwiseSquare.m */; };
 		8DAC279C1980223900639BC5 /* LevelDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC279B1980223900639BC5 /* LevelDisplay.m */; };
 		8DAC27A01980224B00639BC5 /* LevelSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC279F1980224B00639BC5 /* LevelSelect.m */; };
@@ -172,6 +173,7 @@
 		8D792A221974908A00AE52B2 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = Source/Level.m; sourceTree = "<group>"; };
 		8D792A271974927F00AE52B2 /* ScoreScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreScreen.h; path = Source/ScoreScreen.h; sourceTree = "<group>"; };
 		8D792A281974927F00AE52B2 /* ScoreScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreScreen.m; path = Source/ScoreScreen.m; sourceTree = "<group>"; };
+		8D823BEA1999354200AE0150 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8D8A7825197D80130034CD51 /* ClockwiseSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClockwiseSquare.h; path = Source/ClockwiseSquare.h; sourceTree = "<group>"; };
 		8D8A7826197D80130034CD51 /* ClockwiseSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClockwiseSquare.m; path = Source/ClockwiseSquare.m; sourceTree = "<group>"; };
 		8DAC279A1980223900639BC5 /* LevelDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelDisplay.h; path = Source/LevelDisplay.h; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				B77F1B3A17B978D7009739AE /* AVFoundation.framework in Frameworks */,
 				B77F1B3C17B978D7009739AE /* UIKit.framework in Frameworks */,
 				B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */,
+				8D823BEB1999354200AE0150 /* Crashlytics.framework in Frameworks */,
 				B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */,
 				B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */,
 				8DE99B50198990B700C77A06 /* mgwuSDK.framework in Frameworks */,
@@ -527,6 +530,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D823BEA1999354200AE0150 /* Crashlytics.framework */,
 				8DE99B02198990B700C77A06 /* mgwuSDK-master */,
 				8DE99B0019898A6D00C77A06 /* Twitter.framework */,
 				8DE99AFE19898A6000C77A06 /* SystemConfiguration.framework */,
@@ -585,6 +589,7 @@
 				B77F1B2A17B978D7009739AE /* Sources */,
 				B77F1B2B17B978D7009739AE /* Frameworks */,
 				B77F1B2C17B978D7009739AE /* Resources */,
+				8D823BE8199934A300AE0150 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -747,6 +752,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8D823BE8199934A300AE0150 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 9fb799dda3fa460e2c79fad4847bc9a1a9781e31 daf0ee68532b8292c233c37d45f01964614159be8c056d278e276c7730bdfcda";
+		};
 		D2E0167A18D782EC00927430 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -868,6 +886,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mgwuSDK-master/mgwuSDK.embeddedframework",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -881,7 +900,7 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -891,6 +910,7 @@
 				);
 				PRODUCT_NAME = Tumble;
 				PROVISIONING_PROFILE = "D0190417-620E-479A-82FE-5BF5C154209A";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -901,12 +921,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Morgan Chen (M6DRS84M33)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Morgan Chen (M6DRS84M33)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mgwuSDK-master/mgwuSDK.embeddedframework",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
@@ -919,7 +940,7 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -928,6 +949,7 @@
 				);
 				PRODUCT_NAME = Tumble;
 				PROVISIONING_PROFILE = "D0190417-620E-479A-82FE-5BF5C154209A";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

@@ -22,6 +22,7 @@
         levelProgress = [Gameplay generateEmptyLevelProgress];
     }
     [MGWU setObject:levelProgress forKey:@"levelProgress"];
+    _motionManager = [[CMMotionManager alloc] init];
     [_motionManager startAccelerometerUpdates];
 }
 
@@ -37,6 +38,13 @@
         }
     }
     [_player.physicsBody applyImpulse:ccp(accel * 75, 0)];
+    
+    if(_player.physicsBody.velocity.x < -5){
+        _player.flipX = TRUE;
+    }
+    else if (_player.physicsBody.velocity.x > 5){
+        _player.flipX = FALSE;
+    }
 }
 
 -(void)play {

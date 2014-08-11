@@ -233,10 +233,10 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 }
 
 -(void)playerDeath {
-    CCParticleSystem *playerDeath = (CCParticleSystem *)[CCBReader load:@"PlayerDeath"];
-    playerDeath.autoRemoveOnFinish = TRUE;
-    playerDeath.position = _player.position;
-    [_player.parent addChild:playerDeath];
+//    CCParticleSystem *playerDeath = (CCParticleSystem *)[CCBReader load:@"PlayerDeath"];
+//    playerDeath.autoRemoveOnFinish = TRUE;
+//    playerDeath.position = _player.position;
+//    [_player.parent addChild:playerDeath];
     self.userInteractionEnabled = FALSE;
     [_player removeFromParent];
     [self restartLevel];

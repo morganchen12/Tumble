@@ -27,6 +27,7 @@
 
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation AppController
 
@@ -56,6 +57,8 @@
     
     [MGWU loadMGWU:@"mgwu20113994706121613196"];
     [MGWU preFacebook]; //Temporarily disables Facebook until you integrate it later
+    
+    [Crashlytics startWithAPIKey:@"9fb799dda3fa460e2c79fad4847bc9a1a9781e31"];
     
     return YES;
 }
