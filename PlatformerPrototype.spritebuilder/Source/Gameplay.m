@@ -246,6 +246,11 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     _timeElapsed += delta;                                                          //increment timer
 }
 
+-(void)mainMenu {
+    CCScene *mainMenu = [CCBReader loadAsScene:@"MainScene"];
+    [[CCDirector sharedDirector] replaceScene:mainMenu];
+}
+
 -(void)fixedUpdate:(CCTime)delta {
     CMAcceleration acceleration = _motionManager.accelerometerData.acceleration;    //move player on device tilt
     float accel = acceleration.y;
