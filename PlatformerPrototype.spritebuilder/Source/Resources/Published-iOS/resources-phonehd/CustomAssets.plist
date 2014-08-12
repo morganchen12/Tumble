@@ -7,7 +7,7 @@
 		<key>CustomAssets/arrowblack.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 1696}, {182, 217}}</string>
+			<string>{{291, 1373}, {182, 217}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -20,7 +20,7 @@
 		<key>CustomAssets/arrowwhite.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 1477}, {182, 217}}</string>
+			<string>{{242, 1741}, {182, 217}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -30,10 +30,23 @@
 			<key>sourceSize</key>
 			<string>{182, 217}</string>
 		</dict>
+		<key>CustomAssets/benji.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{475, 1373}, {180, 180}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {180, 180}}</string>
+			<key>sourceSize</key>
+			<string>{180, 180}</string>
+		</dict>
 		<key>CustomAssets/buttonblack.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{27, 2008}, {24, 24}}</string>
+			<string>{{1, 2017}, {24, 24}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -46,7 +59,7 @@
 		<key>CustomAssets/buttonwhite.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 2008}, {24, 24}}</string>
+			<string>{{1, 1991}, {24, 24}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -72,7 +85,7 @@
 		<key>CustomAssets/circleSmall.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{159, 1915}, {86, 86}}</string>
+			<string>{{330, 1960}, {86, 86}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -85,7 +98,7 @@
 		<key>CustomAssets/danger.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 1227}, {248, 239}}</string>
+			<string>{{1, 1741}, {248, 239}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -98,7 +111,7 @@
 		<key>CustomAssets/flag.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 859}, {288, 366}}</string>
+			<string>{{1, 1373}, {288, 366}}</string>
 			<key>offset</key>
 			<string>{-3, -5}</string>
 			<key>rotated</key>
@@ -108,14 +121,27 @@
 			<key>sourceSize</key>
 			<string>{295, 376}</string>
 		</dict>
+		<key>CustomAssets/icon1024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 859}, {512, 512}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {512, 512}}</string>
+			<key>sourceSize</key>
+			<string>{512, 512}</string>
+		</dict>
 		<key>CustomAssets/mgwu-icon-200.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 1915}, {91, 68}}</string>
+			<string>{{418, 1960}, {91, 68}}</string>
 			<key>offset</key>
 			<string>{0, -1}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceColorRect</key>
 			<string>{{5, 17}, {91, 68}}</string>
 			<key>sourceSize</key>
@@ -124,7 +150,7 @@
 		<key>CustomAssets/mgwu-icon.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{185, 1477}, {200, 200}}</string>
+			<string>{{426, 1592}, {200, 200}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -137,7 +163,7 @@
 		<key>CustomAssets/player.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{71, 1915}, {86, 86}}</string>
+			<string>{{242, 1960}, {86, 86}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -150,7 +176,7 @@
 		<key>CustomAssets/square200.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{185, 1835}, {62, 62}}</string>
+			<string>{{291, 1592}, {62, 62}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -163,7 +189,7 @@
 		<key>CustomAssets/square500.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{185, 1679}, {154, 154}}</string>
+			<string>{{426, 1794}, {154, 154}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -176,7 +202,7 @@
 		<key>CustomAssets/squareSmall.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{53, 2008}, {16, 16}}</string>
+			<string>{{27, 1991}, {16, 16}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>

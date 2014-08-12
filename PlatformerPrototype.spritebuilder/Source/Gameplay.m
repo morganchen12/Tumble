@@ -161,12 +161,12 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
         _angleToShootAt += M_PI;
     }
     
-    if(touchLocation.x - _player.position.x < 0){
-        _player.flipX = TRUE;
-    }
-    else if (touchLocation.x - _player.position.x > PLAYER_TURN_MIN_VEL){
-        _player.flipX = FALSE;
-    }
+//    if(touchLocation.x - _player.position.x < 0){
+//        _player.flipX = TRUE;
+//    }
+//    else if (touchLocation.x - _player.position.x > PLAYER_TURN_MIN_VEL){
+//        _player.flipX = FALSE;
+//    }
 }
 
 -(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
@@ -185,12 +185,12 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
         _angleToShootAt += M_PI;
     }
     
-    if(touchLocation.x - _player.position.x < 0){
-        _player.flipX = TRUE;
-    }
-    else if (touchLocation.x - _player.position.x > PLAYER_TURN_MIN_VEL){
-        _player.flipX = FALSE;
-    }
+//    if(touchLocation.x - _player.position.x < 0){
+//        _player.flipX = TRUE;
+//    }
+//    else if (touchLocation.x - _player.position.x > PLAYER_TURN_MIN_VEL){
+//        _player.flipX = FALSE;
+//    }
 }
 
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event {

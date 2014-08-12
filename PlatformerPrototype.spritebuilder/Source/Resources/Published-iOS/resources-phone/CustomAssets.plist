@@ -7,7 +7,7 @@
 		<key>CustomAssets/arrowblack.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 853}, {91, 108}}</string>
+			<string>{{147, 689}, {91, 108}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -20,7 +20,7 @@
 		<key>CustomAssets/arrowwhite.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 743}, {91, 108}}</string>
+			<string>{{123, 874}, {91, 108}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -30,10 +30,23 @@
 			<key>sourceSize</key>
 			<string>{91, 108}</string>
 		</dict>
+		<key>CustomAssets/benji.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{240, 689}, {90, 90}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {90, 90}}</string>
+			<key>sourceSize</key>
+			<string>{90, 90}</string>
+		</dict>
 		<key>CustomAssets/buttonblack.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{15, 1011}, {12, 12}}</string>
+			<string>{{15, 1001}, {12, 12}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -46,7 +59,7 @@
 		<key>CustomAssets/buttonwhite.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 1011}, {12, 12}}</string>
+			<string>{{1, 1001}, {12, 12}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -72,7 +85,7 @@
 		<key>CustomAssets/circleSmall.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{84, 963}, {44, 44}}</string>
+			<string>{{193, 799}, {44, 44}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -85,7 +98,7 @@
 		<key>CustomAssets/danger.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 616}, {125, 120}}</string>
+			<string>{{1, 874}, {125, 120}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -98,7 +111,7 @@
 		<key>CustomAssets/flag.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 431}, {144, 183}}</string>
+			<string>{{1, 689}, {144, 183}}</string>
 			<key>offset</key>
 			<string>{-1, -2}</string>
 			<key>rotated</key>
@@ -108,14 +121,27 @@
 			<key>sourceSize</key>
 			<string>{147, 188}</string>
 		</dict>
-		<key>CustomAssets/mgwu-icon-200.png</key>
+		<key>CustomAssets/icon1024.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 963}, {46, 35}}</string>
+			<string>{{1, 431}, {256, 256}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {256, 256}}</string>
+			<key>sourceSize</key>
+			<string>{256, 256}</string>
+		</dict>
+		<key>CustomAssets/mgwu-icon-200.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{123, 984}, {46, 35}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
 			<key>sourceColorRect</key>
 			<string>{{2, 8}, {46, 35}}</string>
 			<key>sourceSize</key>
@@ -124,7 +150,7 @@
 		<key>CustomAssets/mgwu-icon.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{94, 743}, {100, 100}}</string>
+			<string>{{216, 845}, {100, 100}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -137,7 +163,7 @@
 		<key>CustomAssets/player.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{38, 963}, {44, 44}}</string>
+			<string>{{147, 799}, {44, 44}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -150,7 +176,7 @@
 		<key>CustomAssets/square200.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{94, 924}, {32, 32}}</string>
+			<string>{{171, 984}, {32, 32}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -163,7 +189,7 @@
 		<key>CustomAssets/square500.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{94, 845}, {77, 77}}</string>
+			<string>{{318, 781}, {77, 77}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -176,7 +202,7 @@
 		<key>CustomAssets/squareSmall.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{29, 1011}, {8, 8}}</string>
+			<string>{{1, 1015}, {8, 8}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
