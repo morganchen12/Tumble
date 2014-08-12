@@ -11,6 +11,7 @@
 #import "Projectile.h"
 #import "CCPhysics+ObjectiveChipmunk.h"
 #import <CoreMotion/CoreMotion.h>
+#import <Crashlytics/Crashlytics.h>
 #import "Level.h"
 #import "ScoreScreen.h"
 
@@ -58,6 +59,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 }
 
 -(void)pause {
+//    [[Crashlytics sharedInstance] crash]; //test crashlytics
     if(self.paused == FALSE){
         self.paused = TRUE;
         _pauseScreen = [CCBReader load:@"PauseScreen" owner:self];
