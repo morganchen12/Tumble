@@ -21,7 +21,7 @@ static const int NUMBER_OF_LEVELS = 25;
 static const float PLAYER_ACCEL_MULTIPLIER = 75;                            //scalar to multiply tilt force with
 static const float EXPLOSION_RADIUS = 100;                                  //explosion radius in points
 static const float EXPLOSION_FORCE_MULTIPLIER = 150000;                     //for easy fine tuning
-static const float EXPLOSION_FORCE_PHYSBOX_MULTIPLIER = 2000;
+static const float EXPLOSION_FORCE_PHYSBOX_MULTIPLIER = 15000;
 static const float MIN_DISTANCE = 20;
 static const float PROJECTILE_LAUNCH_FORCE = .075;
 static const int PROJECTILE_COOLDOWN = 15;                                  //in 60ths of a second
@@ -42,7 +42,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     CCAction *_followPlayer;
     CCNode *_pauseScreen;
     CGPoint _pushDirection;
-//    NSString *_currentLevel;                                              //relative filepath to current level
+    CGPoint _pushPosition;
 }
 
 -(void)onEnter {
@@ -331,7 +331,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     if(world.physicsBody.type == CCPhysicsBodyTypeDynamic){
         CGPoint physBoxLaunchVect = ccp(EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*_pushDirection.x,
                                         EXPLOSION_FORCE_PHYSBOX_MULTIPLIER*_pushDirection.y);
-        [world.physicsBody applyImpulse:physBoxLaunchVect atLocalPoint:myProjectile.position];
+        [world.physicsBody applyImpulse:physBoxLaunchVect atWorldPoint:myProjectile.position];
     }
 }
 
