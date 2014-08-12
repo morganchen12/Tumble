@@ -1132,7 +1132,7 @@
 					<key>collisionType</key>
 					<string>world</string>
 					<key>cornerRadius</key>
-					<real>0.0</real>
+					<real>2</real>
 					<key>density</key>
 					<real>5</real>
 					<key>dynamic</key>
