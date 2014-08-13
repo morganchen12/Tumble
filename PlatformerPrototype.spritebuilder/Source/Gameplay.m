@@ -296,7 +296,10 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     [[CCDirector sharedDirector] replaceScene:levelScene];
 }
 
--(NSString *)convertTimeToString:(float)time {
++(NSString *)convertTimeToString:(float)time {
+    if(time <= 0) {
+        return @"";
+    }
     int hours = (int)(time/3600);
     int minutes = (int)((time - hours*3600)/60);
     int seconds = (int)(time - (minutes*60 + hours*3600));
@@ -314,6 +317,11 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 +(CGPoint)vectorNormalize:(CGPoint)vect {
     float vectMagnitude = powf(powf(vect.x, 2) + powf(vect.y, 2), 0.5);
     return ccp(vect.x / vectMagnitude, vect.y / vectMagnitude);
+}
+
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile playerClip:(CCNode *)playerClip
+{
+    return FALSE;
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair projectile:(CCNode *)projectile world:(CCNode *)world {
@@ -381,8 +389,8 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     NSString *nextLevel = currentLevel.nextLevel;
     ScoreScreen *scoreScreen = (ScoreScreen *)[CCBReader load:@"ScoreScreen" owner:self];
     scoreScreen.nextLevelName = nextLevel;
-    scoreScreen.timeLabel.string = [self convertTimeToString:_timeElapsed];
-    scoreScreen.bestLabel.string = [self convertTimeToString:best];
+    scoreScreen.timeLabel.string = [Gameplay convertTimeToString:_timeElapsed];
+    scoreScreen.bestLabel.string = [Gameplay convertTimeToString:best];
     scoreScreen.positionType = CCPositionTypeNormalized;
     scoreScreen.position = ccp(0.5, 0.5);
     scoreScreen.ownerNode = self;

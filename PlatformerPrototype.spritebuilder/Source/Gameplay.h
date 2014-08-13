@@ -15,5 +15,6 @@
 -(void)loadNextLevel:levelName;
 +(NSMutableDictionary *)generateEmptyLevelProgress;
 +(CGPoint)vectorNormalize:(CGPoint)vect;
++(NSString *)convertTimeToString:(float)time;
 
 @end

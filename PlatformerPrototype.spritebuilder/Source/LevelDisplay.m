@@ -24,19 +24,8 @@
 }
 
 -(void)setTime:(float)time {
-    _timeLabel.string = [self convertTimeToString:time];
+    _timeLabel.string = [Gameplay convertTimeToString:time];
     _time = time;
-}
-
--(NSString *)convertTimeToString:(float)time {
-    if(time == 0){
-        return @"";
-    }
-    int hours = (int)(time/3600);
-    int minutes = (int)((time - hours*3600)/60);
-    int seconds = (int)(time - (minutes*60 + hours*3600));
-    int centiseconds = (int)100*(time - (seconds + minutes*60 + hours*3600));
-    return [NSString stringWithFormat:@"%.2i:%.2i:%.2i.%.2i", hours, minutes, seconds, centiseconds];
 }
 
 -(void)playLevel{
