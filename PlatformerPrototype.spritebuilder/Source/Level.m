@@ -11,12 +11,15 @@
 @implementation Level {
     BOOL _isShowingContributors;
     CCSprite *_benji;
+    CCSprite *_andrew;
+    CCSprite *_daniel;
+    CCSprite *_zach;
     NSArray *_contributors;
 }
 
 -(void)didLoadFromCCB {
     if([self.nextLevel isEqualToString:@"Levels/Level1"]){
-        _contributors = @[_benji];
+        _contributors = @[_benji, _andrew, _daniel, _zach];
     }
 }
 

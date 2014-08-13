@@ -4,6 +4,19 @@
 <dict>
 	<key>frames</key>
 	<dict>
+		<key>CustomAssets/andrew.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{259, 431}, {90, 90}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {90, 90}}</string>
+			<key>sourceSize</key>
+			<string>{90, 90}</string>
+		</dict>
 		<key>CustomAssets/arrowblack.png</key>
 		<dict>
 			<key>frame</key>
@@ -108,6 +121,19 @@
 			<key>sourceSize</key>
 			<string>{125, 120}</string>
 		</dict>
+		<key>CustomAssets/daniel.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{318, 781}, {90, 90}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {90, 90}}</string>
+			<key>sourceSize</key>
+			<string>{90, 90}</string>
+		</dict>
 		<key>CustomAssets/flag.png</key>
 		<dict>
 			<key>frame</key>
@@ -189,7 +215,7 @@
 		<key>CustomAssets/square500.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{318, 781}, {77, 77}}</string>
+			<string>{{259, 523}, {77, 77}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -211,6 +237,19 @@
 			<string>{{0, 0}, {8, 8}}</string>
 			<key>sourceSize</key>
 			<string>{8, 8}</string>
+		</dict>
+		<key>CustomAssets/zach.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{318, 873}, {90, 90}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {90, 90}}</string>
+			<key>sourceSize</key>
+			<string>{90, 90}</string>
 		</dict>
 	</dict>
 	<key>metadata</key>

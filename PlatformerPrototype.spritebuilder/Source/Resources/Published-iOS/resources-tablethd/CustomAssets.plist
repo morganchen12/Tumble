@@ -4,6 +4,19 @@
 <dict>
 	<key>frames</key>
 	<dict>
+		<key>CustomAssets/andrew.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1519, 3465}, {360, 360}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {360, 360}}</string>
+			<key>sourceSize</key>
+			<string>{360, 360}</string>
+		</dict>
 		<key>CustomAssets/arrowblack.png</key>
 		<dict>
 			<key>frame</key>
@@ -33,15 +46,15 @@
 		<key>CustomAssets/benji.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{945, 2741}, {361, 361}}</string>
+			<string>{{945, 2741}, {360, 360}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{0, 0}, {361, 361}}</string>
+			<string>{{0, 0}, {360, 360}}</string>
 			<key>sourceSize</key>
-			<string>{361, 361}</string>
+			<string>{360, 360}</string>
 		</dict>
 		<key>CustomAssets/buttonblack.png</key>
 		<dict>
@@ -107,6 +120,19 @@
 			<string>{{2, 2}, {496, 478}}</string>
 			<key>sourceSize</key>
 			<string>{500, 480}</string>
+		</dict>
+		<key>CustomAssets/daniel.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1157, 3579}, {360, 360}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {360, 360}}</string>
+			<key>sourceSize</key>
+			<string>{360, 360}</string>
 		</dict>
 		<key>CustomAssets/flag.png</key>
 		<dict>
@@ -211,6 +237,19 @@
 			<string>{{0, 0}, {32, 32}}</string>
 			<key>sourceSize</key>
 			<string>{32, 32}</string>
+		</dict>
+		<key>CustomAssets/zach.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1249, 3103}, {360, 360}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {360, 360}}</string>
+			<key>sourceSize</key>
+			<string>{360, 360}</string>
 		</dict>
 	</dict>
 	<key>metadata</key>
