@@ -8,7 +8,7 @@
 
 #import "Square.h"
 
-static const float ROTATION_TOLERANCE = M_PI/2;                              //max angular velocity in rad/sec before damping
+static const float ROTATION_TOLERANCE = 0;                              //max angular velocity in rad/sec before damping
 static const float DAMPING_MAGNITUDE = 0.99;
 
 @implementation Square
