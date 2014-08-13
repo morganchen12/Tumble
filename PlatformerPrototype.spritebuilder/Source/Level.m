@@ -20,6 +20,9 @@
 -(void)didLoadFromCCB {
     if([self.nextLevel isEqualToString:@"Levels/Level1"]){
         _contributors = @[_benji, _andrew, _daniel, _zach];
+        for(CCSprite *contributor in _contributors){
+            contributor.visible = FALSE;
+        }
     }
 }
 
@@ -29,6 +32,7 @@
     }
     for(CCSprite *contributor in _contributors){
         contributor.position = ccp(contributor.position.x, contributor.position.y - 150);
+        contributor.visible = TRUE;
     }
     _isShowingContributors = TRUE;
 }
