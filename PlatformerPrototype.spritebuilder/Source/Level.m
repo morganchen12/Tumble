@@ -8,6 +8,26 @@
 
 #import "Level.h"
 
-@implementation Level
+@implementation Level {
+    BOOL _isShowingContributors;
+    CCSprite *_benji;
+    NSArray *_contributors;
+}
+
+-(void)didLoadFromCCB {
+    if([self.nextLevel isEqualToString:@"Levels/Level1"]){
+        _contributors = @[_benji];
+    }
+}
+
+-(void)showContributors {
+    if(_isShowingContributors){
+        return;
+    }
+    for(CCSprite *contributor in _contributors){
+        contributor.position = ccp(contributor.position.x, contributor.position.y - 150);
+    }
+    _isShowingContributors = TRUE;
+}
 
 @end
