@@ -28,10 +28,20 @@
     _time = time;
 }
 
+-(NSString *)convertLevelNumberToString {
+    return [NSString stringWithFormat:@"Levels/Level%i", _levelNumber];
+}
+
+-(void)recordAnalytics {
+    NSDictionary *params = @{@"levelName": [self convertLevelNumberToString]};
+    [MGWU logEvent:@"levelSelected" withParams:params];
+}
+
 -(void)playLevel{
+    [self recordAnalytics];
     CCScene *gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
     Gameplay *gameplay = gameplayScene.children[0];
-    gameplay.currentLevel = [NSString stringWithFormat:@"Levels/Level%i", _levelNumber];
+    gameplay.currentLevel = [self convertLevelNumberToString];
     [[CCDirector sharedDirector] replaceScene:gameplayScene];
 }
 
