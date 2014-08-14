@@ -88,7 +88,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 -(void)findCurrentLevel {
 #ifdef DEBUG
     _currentLevel = @"Levels/Level1";
-    _currentLevel = @"Levels/Credits";
+//    _currentLevel = @"Levels/Credits";
     return;
 #endif
     int levelNumber = 1;
@@ -110,7 +110,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
         _levelProgress = [Gameplay generateEmptyLevelProgress];
     }
 #ifdef DEBUG
-    [[CCDirector sharedDirector] setDisplayStats:YES];  //debug fps counter
+//    [[CCDirector sharedDirector] setDisplayStats:YES];  //debug fps counter
 #endif
     [self findCurrentLevel];
     _shooting = FALSE;
@@ -121,7 +121,7 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
 +(NSMutableDictionary *)generateEmptyLevelProgress {
     float empty = 0.f;
 #ifdef DEBUG
-    empty = 3600.f;
+    empty = 0.f; //3600.f;
 #endif
     NSMutableDictionary *temp = [@{} mutableCopy];
     for(int i = 0; i < NUMBER_OF_LEVELS; i++){
