@@ -1186,7 +1186,7 @@
 								<string>Block</string>
 								<key>value</key>
 								<array>
-									<string>restartLevel</string>
+									<string>retry</string>
 									<integer>2</integer>
 								</array>
 							</dict>
@@ -1441,6 +1441,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>

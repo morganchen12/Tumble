@@ -288,6 +288,13 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     }
 }
 
+-(void)retry {
+    NSDictionary *params = @{@"levelName": _currentLevel,
+                             @"timeElapsed": @(_timeElapsed)};
+    [MGWU logEvent:@"levelRestarted" withParams:params];
+    [self restartLevel];
+}
+
 -(void)restartLevel {
     [_contentNode stopAction:_followPlayer];
     CCScene *levelScene = [CCBReader loadAsScene:@"Gameplay"];
