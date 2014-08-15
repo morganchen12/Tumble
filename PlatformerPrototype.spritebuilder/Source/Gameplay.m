@@ -400,7 +400,6 @@ static const float PLAYER_XVEL_CAP = 150;                                   //ca
     scoreScreen.bestLabel.string = [Gameplay convertTimeToString:best];
     scoreScreen.positionType = CCPositionTypeNormalized;
     scoreScreen.position = ccp(0.5, 0.5);
-    scoreScreen.ownerNode = self;
     [self addChild:scoreScreen];
     [self saveProgress];
     [self recordAnalytics];

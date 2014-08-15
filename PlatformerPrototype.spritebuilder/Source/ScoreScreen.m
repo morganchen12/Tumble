@@ -11,7 +11,7 @@
 @implementation ScoreScreen
 
 -(void)loadNextLevel {
-    [self.ownerNode loadNextLevel:self.nextLevelName];
+    [(Gameplay *)self.parent loadNextLevel:self.nextLevelName];
 }
 
 @end
