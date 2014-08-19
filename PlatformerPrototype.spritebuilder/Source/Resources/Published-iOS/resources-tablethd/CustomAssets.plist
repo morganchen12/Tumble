@@ -7,7 +7,7 @@
 		<key>CustomAssets/andrew.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1519, 3465}, {360, 360}}</string>
+			<string>{{1209, 3143}, {360, 360}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -20,7 +20,7 @@
 		<key>CustomAssets/arrowblack.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{579, 2741}, {364, 434}}</string>
+			<string>{{481, 3475}, {364, 434}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -33,7 +33,7 @@
 		<key>CustomAssets/arrowwhite.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{481, 3475}, {364, 434}}</string>
+			<string>{{579, 2741}, {364, 434}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -46,7 +46,7 @@
 		<key>CustomAssets/benji.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{945, 2741}, {360, 360}}</string>
+			<string>{{967, 3665}, {360, 360}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -56,10 +56,23 @@
 			<key>sourceSize</key>
 			<string>{360, 360}</string>
 		</dict>
+		<key>CustomAssets/bg.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{579, 3177}, {256, 256}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {256, 256}}</string>
+			<key>sourceSize</key>
+			<string>{256, 256}</string>
+		</dict>
 		<key>CustomAssets/buttonblack.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 4023}, {48, 48}}</string>
+			<string>{{1, 3973}, {48, 48}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -72,7 +85,7 @@
 		<key>CustomAssets/buttonwhite.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 3973}, {48, 48}}</string>
+			<string>{{1, 4023}, {48, 48}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -124,7 +137,7 @@
 		<key>CustomAssets/daniel.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1157, 3579}, {360, 360}}</string>
+			<string>{{847, 3303}, {360, 360}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -176,7 +189,7 @@
 		<key>CustomAssets/mgwu-icon.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{847, 3177}, {400, 400}}</string>
+			<string>{{945, 2741}, {400, 400}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -202,7 +215,7 @@
 		<key>CustomAssets/square200.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{579, 3177}, {124, 124}}</string>
+			<string>{{837, 3177}, {124, 124}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -215,7 +228,7 @@
 		<key>CustomAssets/square500.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{847, 3579}, {308, 308}}</string>
+			<string>{{1027, 1715}, {308, 308}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -241,7 +254,7 @@
 		<key>CustomAssets/zach.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1249, 3103}, {360, 360}}</string>
+			<string>{{1329, 3505}, {360, 360}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>

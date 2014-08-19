@@ -16,6 +16,8 @@ static const float DAMPING_MAGNITUDE = 0.99;
 -(void)didLoadFromCCB {
     self.physicsBody.collisionGroup = @"worldBrushes";
     self.physicsBody.collisionType = @"world";
+//    CCNodeColor *color = (CCNodeColor *)self.children[0];
+//    color.opacity = 1.f - (arc4random() % 100)/1000.f;
 }
 
 -(void)fixedUpdate:(CCTime)delta {
